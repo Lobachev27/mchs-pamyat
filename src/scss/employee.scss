@@ -1,0 +1,121 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.employee {
+  position: relative;
+  padding-bottom: 40px;
+  margin-top: -220px;
+  min-height: 220px;
+  z-index: 2;
+  @media screen and (min-width: $tablet1) {
+    min-height: 440px;
+  }
+  @media screen and (min-width: $tablet2) {
+    margin-top: -320px;
+    min-height: 540px;
+  }
+  @media screen and (min-width: $desktop3) {
+    margin-top: -350px;
+    min-height: 570px;
+  }
+
+  &__list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    max-width: 1150px;
+    margin: 0 auto;
+    @media screen and (min-width: $tablet1) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      max-width: 610px;
+      margin-bottom: 40px;
+    }
+    @media screen and (min-width: $tablet2) {
+      justify-content: center;
+      max-width: 935px;
+    }
+    @media screen and (min-width: $desktop1) {
+      max-width: 1170px;
+      margin-bottom: 60px;
+    }
+
+    &.memorial_plaque__list {
+      & .slider__box-img {
+        height: 200px;
+
+        & img {
+          object-position: center top;
+        }
+      }
+    }
+  }
+
+  &__item {
+    width: 100%;
+    margin-bottom: 30px;
+    @media screen and (min-width: $tablet1) {
+      width: 285px;
+      margin: 30px 0 0;
+    }
+    @media screen and (min-width: $tablet2) {
+      margin-top: 40px;
+      margin-right: 40px;
+    }
+    @media screen and (min-width: $desktop1) {
+      margin-top: 60px;
+      margin-right: 157px;
+    }
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      @media screen and (min-width: $tablet1) {
+        margin-top: 0;
+      }
+    }
+
+    &:nth-child(3) {
+      @media screen and (min-width: $tablet2) {
+        margin-top: 0;
+      }
+    }
+
+    &:nth-child(3n) {
+      @media screen and (min-width: $tablet2) {
+        margin-right: 0;
+      }
+    }
+
+    &:nth-last-child(1) {
+      @media screen and (min-width: $tablet2) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  & .btn-gold {
+    &:hover {
+      background-color: $gold;
+      border: 2px solid $gold;
+    }
+  }
+
+  &__down {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (min-width: $tablet1) {
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 40px;
+      padding-bottom: 220px;
+    }
+    @media screen and (min-width: $desktop1) {
+      margin-top: 60px;
+    }
+  }
+}

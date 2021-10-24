@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Награды"
+})
+
+<body>
+
+@@include("./components/header.html", {
+  context: {
+    "class": "header-main",
+    "classMobile": "header-mobile-blue",
+  }
+})
+
+<main class="main">
+
+  <section class="intro intro-awards">
+    <div class="intro__bg"></div>
+    <div class="container">
+      <div class="intro-awards__info">
+        <div class="intro-employee__text">Книга памяти</div>
+        <div class="breadcrumbs">
+          <a class="breadcrumbs__link" href="./">Главная</a>
+          <span>/</span>
+          <p class="breadcrumbs__link">Награды</p>
+        </div>
+        <h1 class="title title-h1 title-gold">Награды</h1>
+        <div class="intro__description">За время службы наши сотрудники получили множество поощрений и наград. Некоторые из них были награждены орденом «Мужества» (посмертно) за мужество и героизм, проявленные при спасении людей. </div>
+      </div>
+    </div>
+  </section>
+
+  @@include("./components/awards-list.html", {
+    context: {
+      arr: [
+        {"img": "./img/awards-01.png", "name": "Орден «Мужества»", "description": "Государственная награда Российской Федерации. Учреждён Указом Президента Российской Федерации от 2 марта 1994 года № 442 «О государственных наградах Российской Федерации». Автор эскиза награды — народный художник Российской Федерации Е. И. Ухналёв.", "link": "awards-detail.html",},
+        {"img": "./img/awards-02.png", "name": "Медаль «За безупречную службу» 3-й степени", "description": "Ведомственная медаль, учреждённая совместным приказом Министра обороны СССР, Министра внутренних дел СССР и Председателя Комитета государственной безопасности СССР от 25 января 1958 года.", "link": "awards-detail.html",},
+        {"img": "./img/awards-03.png", "name": "«За спасение погибавших»", "description": "Государственная награда Российской Федерации, учреждённая Указом Президента Российской Федерации от 2 марта 1994 года № 442. Автор медали – ведущий специалист Государственной герольдии, историк П. К. Корнаков", "link": "awards-detail.html",},
+        {"img": "./img/awards-04.png", "name": "Медаль «За отвагу»", "description": "Государственная награда Российской Федерации, вручаемая за мужество и отвагу, проявленные в боях и при выполнении специальных заданий по обеспечению государственной безопасности, при защите конституционных прав граждан в условиях, сопряжённых с риском для жизни", "link": "awards-detail.html",},
+        {"img": "./img/awards-05.png", "name": "Медаль «За отвагу на пожаре»", "description": "Государственная награда Российской Федерации. Учреждена Указом Президента Российской Федерации от 15 сентября 2018 года № 519 «Об учреждении медали „За отвагу на пожаре“ и установлении почётного звания „Заслуженный работник пожарной охраны Российской Федерации“»", "link": "awards-detail.html",},
+      ]
+    }
+  })
+
+</main>
+
+@@include("./components/footer.html", {
+  context: {
+    "class": "footer-awards",
+    "social": false,
+  }
+})
+
+@@include("./components/popup-add-hero.html")
+
+@@include("./components/popup-feedback.html")
+
+@@include("./components/popup-result.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>

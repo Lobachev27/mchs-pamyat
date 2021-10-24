@@ -1,0 +1,102 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.page-404 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  height: 100%;
+  padding: 120px 0;
+  @media screen and (min-width: $tablet1) {
+    padding: 150px 0;
+  }
+  @media screen and (min-width: $desktop1) {
+    padding: 200px 0;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100vw;
+    background-color: $blue;
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      width: 100vw;
+      background: url("../img/bg-photo-1.png") no-repeat;
+      background-position: center bottom;
+      background-size: cover;
+    }
+  }
+
+  &__info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  &__big{
+    font-family: 'Proxima Nova';
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 80px;
+    color: $white;
+    text-align: center;
+    margin-bottom: 20px;
+    @media screen and (min-width: $tablet1) {
+      font-size: 80px;
+      line-height: 90px;
+    }
+    @media screen and (min-width: $tablet2) {
+      font-size: 100px;
+      line-height: 122px;
+    }
+  }
+
+  &__middle{
+    font-family: 'Charter';
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26px;
+    color: $white;
+    text-align: center;
+    margin-bottom: 20px;
+    @media screen and (min-width: $tablet1) {
+      font-size: 24px;
+      line-height: 30px;
+    }
+    @media screen and (min-width: $tablet2) {
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+
+  &__little{
+    font-family: 'Charter';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px;
+    color: $white;
+    text-align: center;
+    margin-bottom: 30px;
+    @media screen and (min-width: $tablet1) {
+      font-size: 24px;
+      line-height: 30px;
+    }
+    @media screen and (min-width: $tablet2) {
+      font-size: 32px;
+      line-height: 41px;
+    }
+  }
+}

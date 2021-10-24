@@ -1,0 +1,271 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.photo {
+  position: relative;
+  margin-top: 60px;
+
+  &__wrap {
+    position: relative;
+    width: 184vw;
+    height: 62vw;
+    left: 45%;
+    transform: translateX(-50%);
+    @media screen and (min-width: $tablet1) {
+      width: 147vw;
+      height: 50vw;
+      left: 45%;
+    }
+    @media screen and (min-width: $tablet2) {
+      width: 138vw;
+      height: 47vw;
+      left: 46%;
+    }
+    @media screen and (min-width: $desktop2) {
+      width: calc(100% + 6vw);
+      height: 36vw;
+      left: 47%;
+    }
+  }
+
+  &__item {
+    position: absolute;
+    overflow: hidden;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-position: center;
+      object-fit: cover;
+    }
+
+    &.one {
+      width: 17.48%;
+      height: 34.14%;
+      top: 0;
+      left: 13.79%;
+      z-index: 2;
+    }
+
+    &.two {
+      width: 26.84%;
+      height: 51.71%;
+      top: 24.14%;
+      left: 0;
+      z-index: 3;
+    }
+
+    &.three {
+      width: 20.58%;
+      height: 46.57%;
+      top: 6.71%;
+      left: 22.28%;
+      z-index: 1;
+    }
+
+    &.four {
+      width: 22.38%;
+      height: 42.43%;
+      top: 51.86%;
+      left: 22.23%;
+      z-index: 5;
+    }
+
+    &.five {
+      width: 22.23%;
+      height: 100%;
+      top: 0;
+      left: 41.55%;
+      z-index: 4;
+    }
+
+    &.six {
+      width: 19.85%;
+      height: 41.71%;
+      top: 6.86%;
+      right: 19.51%;
+      z-index: 6;
+    }
+
+    &.seven {
+      width: 19.51%;
+      height: 45.57%;
+      top: 48.43%;
+      right: 16.75%;
+      z-index: 4;
+    }
+
+    &.eight {
+      width: 16.07%;
+      height: 27.57%;
+      top: 0;
+      right: 10.83%;
+      z-index: 7;
+    }
+
+    &.nine {
+      width: 22.04%;
+      height: 59.71%;
+      top: 18.14%;
+      right: 0;
+      z-index: 8;
+    }
+  }
+}
+
+.photo-person {
+  position: relative;
+  padding-top: 60px;
+
+  &__wrap {
+    position: relative;
+    max-width: 1485px;
+    max-height: 700px;
+    width: 100%;
+    height: 47.5vw;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    position: absolute;
+    overflow: hidden;
+
+    & img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-position: center top;
+      object-fit: cover;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      background-color: $blue;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: url("../img/icon-search-gold.svg") no-repeat;
+      background-position: center;
+      background-size: contain;
+      opacity: 0;
+      transition: opacity 0.3s;
+      @media screen and (min-width: $tablet1) {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    &:hover {
+      &:before {
+        opacity: 0.78;
+        transition: opacity 0.5s;
+      }
+
+      &:after {
+        opacity: 1;
+        transition: opacity 0.5s;
+      }
+    }
+
+    &.one {
+      width: 17.51%;
+      height: 59.71%;
+      top: 25%;
+      left: 0;
+      z-index: 2;
+    }
+
+    &.two {
+      width: 27.07%;
+      height: 45.57%;
+      top: 6.86%;
+      left: 7.68%;
+      z-index: 1;
+    }
+
+    &.three {
+      width: 26.94%;
+      height: 42%;
+      top: 52.29%;
+      left: 11.45%;
+      z-index: 4;
+    }
+
+    &.four {
+      width: 30.84%;
+      height: 100%;
+      top: 0;
+      left: 34.55%;
+      z-index: 3;
+    }
+
+    &.five {
+      width: 26.94%;
+      height: 42%;
+      top: 6.86%;
+      right: 11.45%;
+      z-index: 5;
+    }
+
+    &.six {
+      width: 27.07%;
+      height: 45.57%;
+      top: 48.71%;
+      right: 7.68%;
+      z-index: 7;
+    }
+
+    &.seven {
+      width: 17.51%;
+      height: 59.71%;
+      top: 15.43%;
+      right: 0;
+      z-index: 6;
+    }
+  }
+
+  &__img {
+    &-name {
+      font-family: 'Charter';
+      font-weight: 700;
+      font-size: 10px;
+      line-height: 14px;
+      text-align: center;
+      margin-bottom: 5px;
+      @media screen and (min-width: $tablet1) {
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+
+    &-description {
+      font-family: 'Charter';
+      font-weight: 400;
+      font-style: italic;
+      font-size: 10px;
+      line-height: 14px;
+      text-align: center;
+      color: #84969D;
+      @media screen and (min-width: $tablet1) {
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+  }
+}

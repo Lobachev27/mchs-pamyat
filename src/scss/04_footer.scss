@@ -1,0 +1,334 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.footer {
+  position: relative;
+  padding: 60px 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+  @media screen and (min-width: $tablet1) {
+    padding: 120px 0 80px;
+  }
+  @media screen and (min-width: $tablet2) {
+    padding: 180px 0 100px;
+  }
+  @media screen and (min-width: $desktop1) {
+    padding: 220px 0 120px;
+  }
+  @media screen and (min-width: $desktop3) {
+    padding: 300px 0 160px;
+  }
+
+  &-main {
+    margin-top: -35vw;
+    @media screen and (min-width: $tablet1) {
+      margin-top: -30vw;
+    }
+    @media screen and (min-width: $desktop2) {
+      margin-top: -27vw;
+    }
+    @media screen and (min-width: $desktop3) {
+      margin-top: -25vw;
+    }
+
+    & .footer__info {
+      padding-top: 31vw;
+      @media screen and (min-width: $tablet1) {
+        padding-top: 25vw;
+      }
+      @media screen and (min-width: $tablet2) {
+        padding-top: 20vw;
+      }
+      @media screen and (min-width: $desktop2) {
+        padding-top: 20vw;
+      }
+      @media screen and (min-width: $desktop3) {
+        padding-top: 18vw;
+      }
+    }
+  }
+
+  &-list {
+    @media screen and (min-width: $tablet1) {
+      margin-top: -220px !important;
+    }
+  }
+
+  &-awards {
+    @media screen and (min-width: $tablet2) {
+      margin-top: -90px
+    }
+    @media screen and (min-width: $desktop1) {
+      margin-top: -110px
+    }
+    @media screen and (min-width: $desktop3) {
+      margin-top: -150px
+    }
+  }
+
+  &-gray {
+    z-index: 2;
+
+    & .footer__bg {
+      &:before {
+        border-right: 50vw solid transparent;
+        border-left: 50vw solid #F8F8F8;
+        border-top: 30px solid #F8F8F8;
+        @media screen and (min-width: $tablet1) {
+          border-bottom: 60px solid transparent;
+          border-top: 60px solid #F8F8F8;
+        }
+        @media screen and (min-width: $tablet2) {
+          border-bottom: 90px solid transparent;
+          border-top: 90px solid #F8F8F8;
+        }
+        @media screen and (min-width: $desktop1) {
+          border-bottom: 110px solid transparent;
+          border-top: 110px solid #F8F8F8;
+        }
+        @media screen and (min-width: $desktop3) {
+          border-bottom: 150px solid transparent;
+          border-top: 150px solid #F8F8F8;
+        }
+      }
+    }
+  }
+
+  &-white {
+    z-index: 2;
+
+    & .footer__bg {
+      &:before {
+        border-right: 50vw solid transparent;
+        border-left: 50vw solid $white;
+        border-bottom: 30px solid transparent;
+        border-top: 30px solid $white;
+        @media screen and (min-width: $tablet1) {
+          border-bottom: 60px solid transparent;
+          border-top: 60px solid $white;
+        }
+        @media screen and (min-width: $tablet2) {
+          border-bottom: 90px solid transparent;
+          border-top: 90px solid $white;
+        }
+        @media screen and (min-width: $desktop1) {
+          border-bottom: 110px solid transparent;
+          border-top: 110px solid $white;
+        }
+        @media screen and (min-width: $desktop3) {
+          border-bottom: 150px solid transparent;
+          border-top: 150px solid $white;
+        }
+      }
+    }
+  }
+
+  &-bfn {
+    border-top: 6px solid $gold-2;
+    z-index: 2;
+    padding: 40px 0 60px;
+    @media screen and (min-width: $tablet1) {
+      padding: 60px 0 80px;
+    }
+    @media screen and (min-width: $tablet2) {
+      padding: 90px 0 100px;
+    }
+    @media screen and (min-width: $desktop1) {
+      padding: 110px 0 120px;
+    }
+    @media screen and (min-width: $desktop3) {
+      padding: 150px 0 160px;
+    }
+
+    & .footer__bg {
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100vw;
+    background-color: $blue;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      border-right: 50vw solid transparent;
+      border-left: 50vw solid $white;
+      border-bottom: 30px solid transparent;
+      border-top: 30px solid $white;
+      z-index: 2;
+      @media screen and (min-width: $tablet1) {
+        border-bottom: 60px solid transparent;
+        border-top: 60px solid $white;
+      }
+      @media screen and (min-width: $tablet2) {
+        border-bottom: 90px solid transparent;
+        border-top: 90px solid $white;
+      }
+      @media screen and (min-width: $desktop1) {
+        border-bottom: 110px solid transparent;
+        border-top: 110px solid $white;
+      }
+      @media screen and (min-width: $desktop3) {
+        border-bottom: 150px solid transparent;
+        border-top: 150px solid $white;
+      }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      width: 100vw;
+      background: url("../img/footer-bg.png") no-repeat;
+      background-position: center bottom;
+      background-size: cover;
+      opacity: 0.5;
+    }
+  }
+
+  &__info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+    padding-top: 30px;
+    margin: 0 auto;
+  }
+
+  &__description {
+    position: relative;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: italic;
+    color: $gold-2;
+    text-align: center;
+    line-height: 22px;
+    padding: 25px 0;
+    @media screen and (min-width: $tablet1) {
+      font-size: 18px;
+      line-height: 24px;
+      padding: 30px 0;
+    }
+    @media screen and (min-width: $tablet2) {
+      font-size: 20px;
+      line-height: 28px;
+      padding: 40px 0;
+    }
+    @media screen and (min-width: $desktop1) {
+      font-size: 22px;
+      line-height: 32px;
+      padding: 50px 0;
+    }
+
+    &:first-of-type {
+      max-width: 680px;
+    }
+
+    &:last-of-type {
+      &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        width: 440px;
+        height: 1px;
+        background-color: #ACA076;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0.2;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        background: url("../img/tracery.svg") no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 32px;
+        height: 16px;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &__logo {
+    position: relative;
+    width: 70px;
+    padding: 25px 0;
+    @media screen and (min-width: $tablet1) {
+      width: 80px;
+      padding: 30px 0;
+    }
+    @media screen and (min-width: $tablet2) {
+      width: 94px;
+      padding: 40px 0;
+    }
+    @media screen and (min-width: $desktop1) {
+      padding: 80px 0 50px;
+    }
+
+    & img {
+      width: 100%;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      width: 440px;
+      height: 1px;
+      background-color: #ACA076;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0.2;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      background: url("../img/tracery.svg") no-repeat;
+      background-position: center;
+      background-size: contain;
+      width: 32px;
+      height: 16px;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__feedback {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    right: 20px;
+    bottom: 20px;
+
+    & svg {
+      width: 20px;
+      height: 20px;
+      fill: $gold-2;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.breadcrumbs {
+  position: relative;
+  display: block;
+  text-align: center;
+  margin: 15px auto;
+  @media screen and (min-width: $tablet1) {
+    margin: 30px auto;
+  }
+  @media screen and (min-width: $tablet2) {
+    margin: 60px auto 40px;
+  }
+
+  & span{
+    color: $white;
+  }
+
+  &__link{
+    display: inline;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    color: $white;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $gold-2;
+      transition: color 0.3s;
+    }
+
+    &:last-child{
+      color: $white;
+    }
+  }
+}

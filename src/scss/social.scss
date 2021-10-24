@@ -1,0 +1,59 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.social {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto 25px;
+  @media screen and (min-width: $tablet1) {
+    margin: 10px auto 30px;
+  }
+  @media screen and (min-width: $tablet2) {
+    margin: 10px auto 40px;
+  }
+  @media screen and (min-width: $desktop1) {
+    margin: 10px auto 50px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid rgba(9, 58, 101, 0.3);
+    margin-right: 10px;
+    background-color: $white;
+    transition: background-color 0.3s;
+    @media screen and (min-width: $tablet1) {
+      width: 48px;
+      height: 48px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      background-color: $gold-2;
+      transition: background-color 0.3s;
+
+      & svg {
+        fill: $black;
+        transition: fill 0.3s;
+      }
+    }
+
+    & svg {
+      height: 15px;
+      fill: #093A65;
+      transition: fill 0.3s;
+      @media screen and (min-width: $tablet1) {
+        height: 18px;
+      }
+    }
+  }
+}

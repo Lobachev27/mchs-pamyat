@@ -1,0 +1,51 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Charter';
+  font-weight: 700;
+  font-size: 16px;
+  height: 44px;
+  border: 2px solid $gold-2;
+  background-color: transparent;
+  outline: none;
+  padding: 0 30px;
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
+  @media screen and (min-width: $tablet1) {
+    font-size: 17px;
+    height: 50px;
+  }
+  @media screen and (min-width: $desktop1) {
+    height: 58px;
+    padding: 0 44px;
+  }
+
+  &:hover {
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+    cursor: pointer;
+  }
+
+  &-transparent {
+    color: $gold-2;
+
+    &:hover {
+      background-color: $white;
+      border: 2px solid $white;
+      color: $black;
+    }
+  }
+
+  &-gold {
+    background-color: $gold-2;
+    color: $black;
+
+    &:hover {
+      background-color: $white;
+      border: 2px solid $white;
+      color: $black;
+    }
+  }
+}

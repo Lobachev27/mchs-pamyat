@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <title></title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="title" content="" />
+  <meta name="description" content="" />
+  <link
+    rel="stylesheet"
+    href="https://necolas.github.io/normalize.css/latest/normalize.css"
+  />
+  <link
+    rel="stylesheet"
+    href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+  />
+  <link rel="stylesheet" href="./css/swiper.min.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.8.1/dropzone.min.css"
+  />
+  <link
+    href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <body>
+    <header class="header header-main">
+      <div class="header__bg"></div>
+      <div class="container">
+        <ul class="header__list">
+          <li class="header__item">
+            <a class="header__link" href="awards.html">Награды</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="employee.html">Сотрудники</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link-logo" href="./"
+              ><img class="header__logo" src="./img/logo-min.svg" alt=""
+            /></a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="employee.html">Истории героев</a>
+          </li>
+          <li class="header__item">
+            <span class="header__link">Министерство</span>
+            <div class="header__item-dd">
+              <a class="header__item-link" href="events.html">События</a>
+              <a class="header__item-link" href="memorial.html">Музеи</a>
+              <a class="header__item-link" href="memorial.html">Памятники</a>
+              <a class="header__item-link" href="memorial.html"
+                >Мемориальные доски</a
+              >
+            </div>
+          </li>
+        </ul>
+        <!--<div class="header__search">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.966 56.966"><path d="M55.146 51.887L41.588 37.786A22.926 22.926 0 0046.984 23c0-12.682-10.318-23-23-23s-23 10.318-23 23 10.318 23 23 23c4.761 0 9.298-1.436 13.177-4.162l13.661 14.208c.571.593 1.339.92 2.162.92.779 0 1.518-.297 2.079-.837a3.004 3.004 0 00.083-4.242zM23.984 6c9.374 0 17 7.626 17 17s-7.626 17-17 17-17-7.626-17-17 7.626-17 17-17z"/></svg>
+    </div>-->
+        <div class="header__burger">
+          <svg
+            id="hb-1"
+            preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="15.273"
+            viewBox="0 0 24 15.273"
+          >
+            <g
+              id="Group_103"
+              data-name="Group 103"
+              transform="translate(-175 -129)"
+            >
+              <path
+                id="grip-lines"
+                d="M23.25,160H.75a.752.752,0,0,0-.75.75v1.5a.752.752,0,0,0,.75.75h22.5a.752.752,0,0,0,.75-.75v-1.5A.752.752,0,0,0,23.25,160Z"
+                transform="translate(175 -31)"
+              />
+              <path
+                id="grip-lines-2"
+                data-name="grip-lines"
+                d="M23.25,160H.75a.752.752,0,0,0-.75.75v1.5a.752.752,0,0,0,.75.75h22.5a.752.752,0,0,0,.75-.75v-1.5A.752.752,0,0,0,23.25,160Z"
+                transform="translate(175 -24.864)"
+              />
+              <path
+                id="grip-lines-3"
+                data-name="grip-lines"
+                d="M23.25,160H.75a.752.752,0,0,0-.75.75v1.5a.752.752,0,0,0,.75.75h22.5a.752.752,0,0,0,.75-.75v-1.5A.752.752,0,0,0,23.25,160Z"
+                transform="translate(175 -18.727)"
+              />
+            </g>
+          </svg>
+          <svg
+            id="hb-2"
+            xmlns="http://www.w3.org/2000/svg"
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+          >
+            <path
+              id="Closed"
+              d="M5,5,0,10,5,5,0,0,5,5l5-5L5,5l5,5Z"
+              transform="translate(1 1)"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </svg>
+        </div>
+      </div>
+      <!--<div class="header__search-box">
+    <div class="container">
+      <form class="header__search-form">
+        <div class="row">
+          <div class="input__box">
+            <input class="input" type="text" placeholder="В честь кого памятник вы ищете?">
+            <button type="submit">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.966 56.966"><path d="M55.146 51.887L41.588 37.786A22.926 22.926 0 0046.984 23c0-12.682-10.318-23-23-23s-23 10.318-23 23 10.318 23 23 23c4.761 0 9.298-1.436 13.177-4.162l13.661 14.208c.571.593 1.339.92 2.162.92.779 0 1.518-.297 2.079-.837a3.004 3.004 0 00.083-4.242zM23.984 6c9.374 0 17 7.626 17 17s-7.626 17-17 17-17-7.626-17-17 7.626-17 17-17z"/></svg>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>-->
+    </header>
+    <div class="header-mobile header-mobile-blue">
+      <div class="container">
+        <ul class="header-mobile__list">
+          <li class="header-mobile__item">
+            <a class="header-mobile__link" href="awards.html">Награды</a>
+          </li>
+          <li class="header-mobile__item">
+            <a class="header-mobile__link" href="employee.html">Сотрудники</a>
+          </li>
+          <li class="header-mobile__item">
+            <a class="header-mobile__link" href="employee.html"
+              >Истории героев</a
+            >
+          </li>
+          <li class="header-mobile__item">
+            <a class="header-mobile__link" href="events.html">События</a>
+          </li>
+          <li class="header-mobile__item">
+            <a class="header-mobile__link" href="memorial.html">Музеи</a>
+          </li>
+          <li class="header-mobile__item">
+            <a class="header-mobile__link" href="memorial.html">Памятники</a>
+          </li>
+          <li class="header-mobile__item">
+            <a class="header-mobile__link" href="memorial.html"
+              >Мемориальные доски</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <main class="main">
+      <section class="page-404">
+        <div class="page-404__bg"></div>
+        <div class="container">
+          <div class="page-404__info">
+            <div class="page-404__big">404</div>
+            <div class="page-404__middle">Такой страницы не существует</div>
+            <div class="page-404__little">
+              Похоже вы попали сюда случайно, вернитесь на главную
+            </div>
+            <a class="btn btn-gold" href="./">На главную</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer footer-bfn">
+      <div class="footer__bg"></div>
+      <div class="container">
+        <div class="footer__info">
+          <h2 class="title title-h2 title-white">Знаете других героев?</h2>
+          <div class="footer__description">
+            Добавьте своего героя через форму, мы сообщим вам когда ваша история
+            будет опубликована
+          </div>
+          <a
+            class="btn btn-gold"
+            href="javascript:void(0);"
+            onclick="openPopup('addHero')"
+            >Добавить героя</a
+          >
+          <div class="footer__logo">
+            <a href="./">
+              <img src="./img/logo-min.svg" alt="" />
+            </a>
+          </div>
+          <div class="footer__description">
+            Мы никогда не забудем наших геров, они навсегда в наших сердцах
+            словно звезды на небе. Память о них будет храниться вечно.
+          </div>
+        </div>
+      </div>
+      <a
+        class="footer__feedback"
+        href="javascript:void(0);"
+        onclick="openPopup('feedback')"
+      >
+        <svg
+          version="1.1"
+          id="Capa_1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          viewBox="0 0 512 512"
+          xml:space="preserve"
+        >
+          <g>
+            <g>
+              <polygon points="339.392,258.624 512,367.744 512,144.896 		" />
+            </g>
+          </g>
+          <g>
+            <g>
+              <polygon points="0,144.896 0,367.744 172.608,258.624 		" />
+            </g>
+          </g>
+          <g>
+            <g>
+              <path
+                d="M480,80H32C16.032,80,3.36,91.904,0.96,107.232L256,275.264l255.04-168.032C508.64,91.904,495.968,80,480,80z"
+              />
+            </g>
+          </g>
+          <g>
+            <g>
+              <path
+                d="M310.08,277.952l-45.28,29.824c-2.688,1.76-5.728,2.624-8.8,2.624c-3.072,0-6.112-0.864-8.8-2.624l-45.28-29.856
+          L1.024,404.992C3.488,420.192,16.096,432,32,432h448c15.904,0,28.512-11.808,30.976-27.008L310.08,277.952z"
+              />
+            </g>
+          </g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+        </svg>
+      </a>
+    </footer>
+
+    <div id="addHero" class="popup">
+      <div class="popup__wrapper">
+        <div class="popup-close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+          >
+            <path
+              id="Closed"
+              d="M5,5,0,10,5,5,0,0,5,5l5-5L5,5l5,5Z"
+              transform="translate(1 1)"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </svg>
+        </div>
+        <div class="title title-h2 title-white">Добавить героя</div>
+        <form class="popup__form">
+          <div class="row">
+            <div class="popup__form-text">Информация о герое:</div>
+          </div>
+          <div class="row">
+            <div class="input__box">
+              <input class="input" type="text" placeholder="Фамилия" required />
+            </div>
+            <div class="input__box">
+              <input class="input" type="text" placeholder="Имя" required />
+            </div>
+            <div class="input__box">
+              <input
+                class="input"
+                type="text"
+                placeholder="Отчество"
+                required
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="input__box">
+              <textarea
+                class="textarea"
+                rows="5"
+                placeholder="Биография"
+                required
+              ></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input__box">
+              <textarea
+                class="textarea"
+                rows="5"
+                placeholder="Дополнительная информация"
+              ></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input__box">
+              <!--<div class="dropzone dropzone-previews" id="photoDropzone">
+            <div class="dz-infoBlock">
+              <span>Добавить фото</span>
+              <span>В формате *.png, *.jpg, *jpeg. Максимальный размер файла: 3 Мб</span>
+            </div>
+          </div>-->
+              <div class="custom-file-upload">
+                <input
+                  type="file"
+                  id="file"
+                  name="photo[]"
+                  accept="image/x-png,image/jpg,image/jpeg"
+                  multiple
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="popup__form-text">Информация о представителе:</div>
+          </div>
+          <div class="row">
+            <div class="input__box">
+              <input class="input" type="text" placeholder="ФИО" required />
+            </div>
+          </div>
+          <div class="row">
+            <div class="input__box">
+              <input
+                class="input"
+                type="text"
+                placeholder="Кем приходитесь?"
+                required
+              />
+            </div>
+            <div class="input__box">
+              <input
+                class="input phone"
+                type="text"
+                placeholder="Контактный телефон"
+                required
+              />
+            </div>
+            <div class="input__box">
+              <input class="input" type="email" placeholder="Email" required />
+            </div>
+          </div>
+          <div class="row">
+            <div class="input__box">
+              <input class="input" type="text" placeholder="Адрес" />
+            </div>
+          </div>
+          <button class="btn btn-gold" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="feedback" class="popup">
+      <div class="popup__wrapper">
+        <div class="popup-close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+          >
+            <path
+              id="Closed"
+              d="M5,5,0,10,5,5,0,0,5,5l5-5L5,5l5,5Z"
+              transform="translate(1 1)"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </svg>
+        </div>
+        <div class="title title-h2 title-white">Обратная связь</div>
+        <form class="popup__form">
+          <div class="row">
+            <div class="input__box">
+              <input class="input" type="text" placeholder="ФИО" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="input__box">
+              <input class="input" type="email" placeholder="Email" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="popup__form-text">Тип обращения:</div>
+          </div>
+          <div class="row">
+            <div class="radio__list">
+              <label class="radio">
+                <input type="radio" name="type" checked />
+                <div class="radio__box">Вопрос</div>
+              </label>
+              <label class="radio">
+                <input type="radio" name="type" />
+                <div class="radio__box">Сообщение о проблеме</div>
+              </label>
+              <label class="radio">
+                <input type="radio" name="type" />
+                <div class="radio__box">Предложение</div>
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input__box">
+              <textarea
+                class="textarea"
+                rows="5"
+                placeholder="Сообщение"
+                required
+              ></textarea>
+            </div>
+          </div>
+          <button class="btn btn-gold" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="resultPopup" class="popup">
+      <div class="popup__wrapper">
+        <div class="popup-close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+          >
+            <path
+              id="Closed"
+              d="M5,5,0,10,5,5,0,0,5,5l5-5L5,5l5,5Z"
+              transform="translate(1 1)"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </svg>
+        </div>
+        <div class="popup__result-text">
+          Спасибо за Ваше обращение!<br />
+          Мы проверим информацию и свяжемся с Вами.
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.8.1/dropzone.min.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script src="./js/fslightbox.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

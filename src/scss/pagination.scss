@@ -1,0 +1,96 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.pagination {
+  display: none;
+  align-items: center;
+  @media screen and (min-width: $tablet1) {
+    display: flex;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Charter';
+    font-size: 14px;
+    font-weight: 700;
+    background-color: $white;
+    border: 2px solid #EFEDED;
+    margin-left: -2px;
+    width: 31px;
+    height: 31px;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+    z-index: 1;
+    @media screen and (min-width: $mobile1) {
+      width: 36px;
+      height: 36px;
+    }
+    @media screen and (min-width: $mobile2) {
+      width: 40px;
+      height: 40px;
+    }
+    @media screen and (min-width: $tablet1) {
+      width: 44px;
+      height: 44px;
+    }
+    @media screen and (min-width: $tablet2) {
+      font-size: 17px;
+      width: 58px;
+      height: 58px;
+    }
+
+    &:first-child {
+      border-left: 2px solid #EFEDED;
+      border-radius: 0;
+      margin-left: 0;
+    }
+
+    &:last-child {
+      border-radius: 0;
+    }
+
+    &.active {
+      color: $black;
+      background-color: $gold-2;
+      border: 2px solid $gold-2;
+      z-index: 2;
+    }
+
+    &:hover {
+      background-color: $gold;
+      border: 2px solid $gold;
+      transition: background-color 0.3s, color 0.3s, border 0.3s;
+    }
+
+    &.prev,
+    &.next {
+      svg{
+        width: 6px;
+        fill: $black;
+        @media screen and (min-width: $tablet1) {
+          width: 8px;
+        }
+      }
+    }
+
+    &.start,
+    &.end {
+      svg{
+        width: 10px;
+        fill: $black;
+        @media screen and (min-width: $tablet1) {
+          width: 14px;
+        }
+      }
+    }
+
+    &.start,
+    &.prev {
+      svg{
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

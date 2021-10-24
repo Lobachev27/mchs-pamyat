@@ -1,0 +1,227 @@
+@import "partials/params";
+@import "partials/mixins";
+
+
+#photoDropzone {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  border-image: none;
+  width: auto;
+  min-width: 135px;
+  height: auto;
+  min-height: 135px;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  @media screen and (min-width: $mobile1) {
+    justify-content: flex-start;
+    min-width: 110px;
+    min-height: 110px;
+  }
+  @media screen and (min-width: $tablet2) {
+    min-width: 120px;
+    min-height: 120px;
+  }
+
+  & .dz-default.dz-message{
+    display: none;
+  }
+
+  & .dz-infoBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 135px;
+    height: 135px;
+    border: 1px dashed $gold-2;
+    pointer-events: none;
+    @media screen and (min-width: $mobile1) {
+      width: 110px;
+      height: 110px;
+      margin-right: 4px;
+    }
+    @media screen and (min-width: $tablet1) {
+      margin-right: 8px;
+    }
+    @media screen and (min-width: $tablet2) {
+      width: 120px;
+      height: 120px;
+      margin-right: 14px;
+    }
+
+    & span{
+      display: block;
+
+      &:nth-child(1){
+        position: relative;
+        color: #98B7D3;
+        font-size: 12px;
+        text-align: center;
+      }
+
+      &:nth-child(2){
+        color: #98B7D3;
+        font-size: 10px;
+        line-height: 1.2em;
+        text-align: center;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  & .dz-preview.dz-error{
+    display: none;
+  }
+
+  & .dz-preview.dz-image-preview{
+    & .dz-image{
+      border: 1px solid $gold-2;
+    }
+  }
+
+  & .dz-preview{
+    position: relative;
+    height: 135px;
+    width: 135px;
+    overflow: hidden;
+    margin: 0;
+    margin-top: 15px;
+    @media screen and (min-width: $mobile1) {
+      width: 110px;
+      height: 110px;
+      margin-top: 5px;
+      margin-right: 4px;
+    }
+    @media screen and (min-width: $mobile2) {
+      margin-top: 15px;
+    }
+    @media screen and (min-width: $tablet1) {
+      margin-top: 8px;
+      margin-right: 8px;
+    }
+    @media screen and (min-width: $tablet2) {
+      width: 120px;
+      height: 120px;
+      margin-top: 14px;
+      margin-right: 14px;
+    }
+
+    &:nth-child(3) {
+      margin-top: 0;
+    }
+
+    &:nth-child(4) {
+      @media screen and (min-width: $mobile1) {
+        margin-top: 0;
+      }
+    }
+
+    &:nth-child(5),
+    &:nth-child(6) {
+      @media screen and (min-width: $tablet1) {
+        margin-top: 0;
+      }
+    }
+
+    &:nth-child(3n+4) {
+      @media screen and (min-width: $mobile1) {
+        margin-right: 0;
+      }
+      @media screen and (min-width: $tablet1) {
+        margin-right: 8px;
+      }
+      @media screen and (min-width: $tablet1) {
+        margin-right: 14px;
+      }
+    }
+
+    &:nth-child(5n+6) {
+      @media screen and (min-width: $tablet1) {
+        margin-right: 0;
+      }
+    }
+
+    & .dz-image{
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+
+      & img{
+        width: 100%;
+        height: 100%;
+        object-position: center;
+        object-fit: cover;
+      }
+    }
+
+    & .dz-details{
+      background-color: $white;
+      border: 1px solid $gold-2;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      & .dz-size{
+        display: block;
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      & .dz-filename{
+        display: block;
+        font-size: 12px;
+        max-width: 100%;
+
+        & span {
+          border: none;
+        }
+      }
+    }
+
+    & .dz-remove{
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      bottom: 0;
+      width: 100%;
+      font-size: 11px;
+      color: $white;
+      background-color: #ff7474;
+      height: 18px;
+      text-decoration: none;
+      z-index: 100;
+      transition: opacity 0.3s ease-in;
+      pointer-events: none;
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    & .dz-progress{
+      opacity: 0;
+    }
+
+    & .dz-error-mark{
+      z-index: 100;
+      & svg{
+        display: none;
+      }
+    }
+
+    &:hover{
+      & .dz-remove{
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+  }
+}

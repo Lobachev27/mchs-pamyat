@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": ""
+})
+
+<body>
+
+@@include("./components/header.html", {
+  context: {
+    "class": "header-main",
+    "classMobile": "header-mobile-blue",
+  }
+})
+
+<main class="main">
+
+  <section class="page-404">
+    <div class="page-404__bg"></div>
+    <div class="container">
+      <div class="page-404__info">
+        <div class="page-404__big">404</div>
+        <div class="page-404__middle">Такой страницы не существует</div>
+        <div class="page-404__little">Похоже вы попали сюда случайно, вернитесь на главную</div>
+        <a class="btn btn-gold" href="./">На главную</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+@@include("./components/footer.html", {
+  context: {
+    "class": "footer-bfn",
+    "social": false,
+  }
+})
+
+@@include("./components/popup-add-hero.html")
+
+@@include("./components/popup-feedback.html")
+
+@@include("./components/popup-result.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>

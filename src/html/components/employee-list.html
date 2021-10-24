@@ -1,0 +1,15 @@
+<ul class="employee__list">
+  @@for (var i = 0; i < context.arr.length; i++) {
+  <li class="employee__item">
+    <div class="slider__box">
+      <div class="slider__box-img">
+        <img src="`+context.arr[i].img+`" alt="">
+        <div class="slider__box-date">`+context.arr[i].date+`</div>
+      </div>
+      <div class="slider__box-name">`+context.arr[i].name+`</div>
+      <div class="slider__box-position">`+context.arr[i].position+`</div>
+      <a class="slider__box-link" href="`+context.arr[i].link+`"></a>
+    </div>
+  </li>
+  }
+</ul>

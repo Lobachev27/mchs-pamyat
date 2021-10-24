@@ -1,0 +1,74 @@
+<div id="addHero" class="popup">
+  <div class="popup__wrapper">
+    <div class="popup-close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+        <path id="Closed" d="M5,5,0,10,5,5,0,0,5,5l5-5L5,5l5,5Z" transform="translate(1 1)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </svg>
+    </div>
+    <div class="title title-h2 title-white">Добавить героя</div>
+    <form class="popup__form">
+      <div class="row">
+        <div class="popup__form-text">Информация о герое:</div>
+      </div>
+      <div class="row">
+        <div class="input__box">
+          <input class="input" type="text" placeholder="Фамилия" required>
+        </div>
+        <div class="input__box">
+          <input class="input" type="text" placeholder="Имя" required>
+        </div>
+        <div class="input__box">
+          <input class="input" type="text" placeholder="Отчество" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input__box">
+          <textarea class="textarea" rows="5" placeholder="Биография" required></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input__box">
+          <textarea class="textarea" rows="5" placeholder="Дополнительная информация"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input__box">
+          <!--<div class="dropzone dropzone-previews" id="photoDropzone">
+            <div class="dz-infoBlock">
+              <span>Добавить фото</span>
+              <span>В формате *.png, *.jpg, *jpeg. Максимальный размер файла: 3 Мб</span>
+            </div>
+          </div>-->
+          <div class="custom-file-upload">
+            <input type="file" id="file" name="photo[]" accept="image/x-png,image/jpg,image/jpeg" multiple>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="popup__form-text">Информация о представителе:</div>
+      </div>
+      <div class="row">
+        <div class="input__box">
+          <input class="input" type="text" placeholder="ФИО" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input__box">
+          <input class="input" type="text" placeholder="Кем приходитесь?" required>
+        </div>
+        <div class="input__box">
+          <input class="input phone" type="text" placeholder="Контактный телефон" required>
+        </div>
+        <div class="input__box">
+          <input class="input" type="email" placeholder="Email" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input__box">
+          <input class="input" type="text" placeholder="Адрес">
+        </div>
+      </div>
+      <button class="btn btn-gold" type="submit">Отправить</button>
+    </form>
+  </div>
+</div>

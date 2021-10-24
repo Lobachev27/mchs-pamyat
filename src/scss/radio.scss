@@ -1,0 +1,81 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.radio {
+  position: relative;
+  margin-top: 15px;
+  @media screen and (min-width: $tablet1) {
+    margin-top: 0;
+    margin-right: 60px;
+  }
+
+  &:last-child {
+    @media screen and (min-width: $tablet1) {
+      margin-right: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @media screen and (min-width: $tablet1) {
+      flex-direction: row;
+    }
+  }
+
+  & input {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: -1;
+    opacity: 0;
+
+    &:checked + .radio__box:after {
+      opacity: 1;
+      transition: opacity 0.3s;
+    }
+  }
+  &__box{
+    position: relative;
+    font-family: 'Charter';
+    font-size: 14px;
+    line-height: 18px;
+    color: $white;
+    padding-left: 27px;
+    text-align: left;
+    cursor: pointer;
+    z-index: 5;
+    @media screen and (min-width: $tablet1) {
+      font-size: 16px;
+    }
+
+    &:before{
+      content: '';
+      position: absolute;
+      border: 2px solid $gold-2;
+      border-radius: 50%;
+      top: 0;
+      left: 0;
+      width: 18px;
+      height: 18px;
+    }
+
+    &:after{
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      top: 4px;
+      left: 4px;
+      background-color: $gold-2;
+      opacity: 0;
+      z-index: 2;
+      transition: opacity 0.3s;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.sort {
+  display: none;
+  align-items: center;
+  margin-top: 20px;
+  @media screen and (min-width: $tablet1) {
+    display: flex;
+    margin-top: 0;
+  }
+
+  &__text {
+    font-family: 'Charter';
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+    margin-right: 20px;
+    @media screen and (min-width: $tablet2) {
+      font-size: 17px;
+    }
+  }
+
+  & .input__box {
+    position: relative;
+    width: 110px;
+    height: 44px;
+    margin-top: 0;
+    @media screen and (min-width: $tablet2) {
+      height: 58px;
+    }
+
+    & .select {
+      display: none;
+      visibility: hidden;
+
+      &-custom {
+        color: black;
+        width: 100%;
+        height: 44px;
+        @media screen and (min-width: $tablet2) {
+          height: 58px;
+        }
+      }
+
+      &-styled {
+        color: $black;
+        height: 44px;
+        background-color: $white;
+        border: 2px solid #EFEDED;
+        padding: 0 40px 0 20px;
+        @media screen and (min-width: $tablet2) {
+          height: 58px;
+          padding: 0 50px 0 20px;
+        }
+
+        &:not([rel]) {
+          color: $black;
+        }
+
+        &:after {
+          right: 12px;
+          @media screen and (min-width: $tablet2) {
+            right: 15px;
+          }
+        }
+
+        &.active {
+          border: 2px solid $gold-2;
+        }
+      }
+
+      &-options {
+        & li {
+          height: 44px;
+          color: $black;
+          padding: 0 20px;
+          @media screen and (min-width: $tablet2) {
+            height: 58px;
+          }
+        }
+      }
+    }
+  }
+}

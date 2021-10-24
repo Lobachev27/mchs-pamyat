@@ -1,0 +1,200 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.info {
+  position: relative;
+  padding: 40px 0 0;
+  background-color: #F8F8F8;
+  z-index: 1;
+  @media screen and (min-width: $tablet1) {
+    padding: 60px 0 0;
+  }
+  @media screen and (min-width: $tablet2) {
+    padding: 100px 0 0;
+  }
+
+  &__info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__description {
+    position: relative;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: italic;
+    color: $gold-2;
+    text-align: center;
+    line-height: 22px;
+    max-width: 780px;
+    padding-bottom: 25px;
+    @media screen and (min-width: $tablet1) {
+      font-size: 18px;
+      line-height: 24px;
+      padding-bottom: 30px;
+    }
+    @media screen and (min-width: $tablet2) {
+      font-size: 20px;
+      line-height: 28px;
+      padding-bottom: 40px;
+    }
+    @media screen and (min-width: $desktop1) {
+      font-size: 22px;
+      line-height: 32px;
+      padding-bottom: 50px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      width: 440px;
+      height: 1px;
+      background-color: #ACA076;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0.2;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      background: url("../img/tracery.svg") no-repeat;
+      background-position: center;
+      background-size: contain;
+      width: 32px;
+      height: 16px;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    padding-top: 25px;
+    @media screen and (min-width: $tablet1) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 30px;
+    }
+    @media screen and (min-width: $tablet2) {
+      padding-top: 40px;
+    }
+    @media screen and (min-width: $desktop1) {
+      flex-wrap: nowrap;
+      justify-content: center;
+      padding-top: 50px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+    @media screen and (min-width: $tablet1) {
+      width: calc(50% - 40px);
+      align-items: flex-start;
+      margin-bottom: 30px;
+      margin-right: 80px;
+    }
+    @media screen and (min-width: $tablet2) {
+      align-items: center;
+    }
+    @media screen and (min-width: $desktop1) {
+      width: calc(33.33% - 40px);
+      align-items: flex-start;
+      margin-bottom: 0;
+      margin-right: 60px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      margin-right: 0;
+    }
+
+    &:nth-child(2n) {
+      @media screen and (min-width: $tablet1) {
+        margin-right: 0;
+      }
+      @media screen and (min-width: $desktop1) {
+        margin-right: 60px;
+      }
+    }
+
+    &:hover {
+      & .info__name {
+        color: $gold-2;
+        transition: color 0.3s;
+      }
+    }
+  }
+
+  &__amount {
+    font-family: 'Proxima Nova';
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 40px;
+    color: $gold-2;
+    min-width: 72px;
+    text-align: right;
+    margin-right: 15px;
+    @media screen and (min-width: $mobile1) {
+      font-size: 50px;
+      line-height: 50px;
+      min-width: 86px;
+    }
+    @media screen and (min-width: $tablet1) {
+      font-size: 60px;
+      line-height: 48px;
+      min-width: auto;
+      text-align: left;
+      margin-right: 20px;
+    }
+    @media screen and (min-width: $tablet2) {
+      font-size: 80px;
+      line-height: 68px;
+      margin-right: 28px;
+    }
+  }
+
+  &__name {
+    font-size: 14px;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 20px;
+    color: $black;
+    transition: color 0.3s;
+    @media screen and (min-width: $tablet1) {
+      font-size: 15px;
+      line-height: 24px;
+    }
+    @media screen and (min-width: $tablet2) {
+      font-size: 17px;
+      line-height: 28px;
+    }
+  }
+
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+  }
+}

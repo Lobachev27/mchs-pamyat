@@ -1,0 +1,11 @@
+<svg id="color" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22.499" height="20.625" viewBox="0 0 22.499 20.625">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Mask" d="M22.5,20.625H0V1.875H4.688V0H6.563V1.875h3.75V0h1.875V1.875h3.75V0h1.877V1.875H22.5v18.75ZM1.875,18.75h18.75v-15H1.875ZM15,16.875v-3.75h3.75v3.75Zm-5.624,0v-3.75h3.75v3.75Zm-5.626,0v-3.75H7.5v3.75ZM15,11.251V7.5h3.75v3.751Zm-5.624,0V7.5h3.75v3.751Zm-5.626,0V7.5H7.5v3.751Z" fill="none"/>
+    </clipPath>
+  </defs>
+  <path id="Mask-2" data-name="Mask" d="M22.5,20.625H0V1.875H4.688V0H6.563V1.875h3.75V0h1.875V1.875h3.75V0h1.877V1.875H22.5v18.75ZM1.875,18.75h18.75v-15H1.875ZM15,16.875v-3.75h3.75v3.75Zm-5.624,0v-3.75h3.75v3.75Zm-5.626,0v-3.75H7.5v3.75ZM15,11.251V7.5h3.75v3.751Zm-5.624,0V7.5h3.75v3.751Zm-5.626,0V7.5H7.5v3.751Z" fill="none"/>
+  <g id="color-2" data-name="color" clip-path="url(#clip-path)">
+    <rect id="color-3" data-name="color" width="30" height="30" transform="translate(-3.75 -5.625)"/>
+  </g>
+</svg>

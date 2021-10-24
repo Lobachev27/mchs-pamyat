@@ -1,0 +1,426 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.death {
+  position: relative;
+  /*overflow: hidden;*/
+  padding: 80px 0;
+  @media screen and (min-width: $tablet1) {
+    padding: 120px 0;
+  }
+  @media screen and (min-width: $tablet2) {
+    padding: 180px 0;
+  }
+  @media screen and (min-width: $desktop1) {
+    padding: 220px 0;
+  }
+  @media screen and (min-width: $desktop3) {
+    padding: 300px 0;
+  }
+
+  &-gray {
+    & .death__bg {
+      &:after {
+        border-right: 50vw solid #F8F8F8 !important;
+        border-bottom: 30px solid #F8F8F8 !important;
+        z-index: 2;
+        @media screen and (min-width: $tablet1) {
+          border-bottom: 60px solid #F8F8F8 !important;
+        }
+        @media screen and (min-width: $tablet2) {
+          border-bottom: 90px solid #F8F8F8 !important;
+        }
+        @media screen and (min-width: $desktop1) {
+          border-bottom: 110px solid #F8F8F8 !important;
+        }
+        @media screen and (min-width: $desktop3) {
+          border-bottom: 150px solid #F8F8F8 !important;
+        }
+      }
+    }
+  }
+
+  &-afn {
+    padding: 80px 0 40px;
+    @media screen and (min-width: $tablet1) {
+      padding: 120px 0 60px;
+    }
+    @media screen and (min-width: $tablet2) {
+      padding: 180px 0 90px;
+    }
+    @media screen and (min-width: $desktop1) {
+      padding: 220px 0 110px;
+    }
+    @media screen and (min-width: $desktop3) {
+      padding: 300px 0 150px;
+    }
+
+    & .death__bg {
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100vw;
+    background-color: $blue;
+    z-index: -1;
+
+    & img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+    }
+
+    &-gradient {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100%;
+      background: linear-gradient(to bottom, transparent 0, transparent 40vw, $blue 60vw, $blue 80vw);
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      border-right: 50vw solid transparent;
+      border-left: 50vw solid $white;
+      border-bottom: 30px solid transparent;
+      border-top: 30px solid $white;
+      z-index: 2;
+      @media screen and (min-width: $tablet1) {
+        border-bottom: 60px solid transparent;
+        border-top: 60px solid $white;
+      }
+      @media screen and (min-width: $tablet2) {
+        border-bottom: 90px solid transparent;
+        border-top: 90px solid $white;
+      }
+      @media screen and (min-width: $desktop1) {
+        border-bottom: 110px solid transparent;
+        border-top: 110px solid $white;
+      }
+      @media screen and (min-width: $desktop3) {
+        border-bottom: 150px solid transparent;
+        border-top: 150px solid $white;
+      }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      border-left: 50vw solid transparent;
+      border-right: 50vw solid $white;
+      border-top: 30px solid transparent;
+      border-bottom: 30px solid $white;
+      z-index: 2;
+      @media screen and (min-width: $tablet1) {
+        border-top: 60px solid transparent;
+        border-bottom: 60px solid $white;
+      }
+      @media screen and (min-width: $tablet2) {
+        border-top: 90px solid transparent;
+        border-bottom: 90px solid $white;
+      }
+      @media screen and (min-width: $desktop1) {
+        border-top: 110px solid transparent;
+        border-bottom: 110px solid $white;
+      }
+      @media screen and (min-width: $desktop3) {
+        border-top: 150px solid transparent;
+        border-bottom: 150px solid $white;
+      }
+    }
+  }
+
+  &__info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  &__text {
+    font-family: 'Charter';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: $white;
+    text-align: center;
+    letter-spacing: 1.37px;
+    max-width: 680px;
+    margin: 10px auto 20px;
+    @media screen and (min-width: $tablet1) {
+      font-size: 18px;
+      line-height: 24px;
+      margin: 20px auto 30px;
+    }
+    @media screen and (min-width: $tablet2) {
+      font-size: 20px;
+      line-height: 28px;
+    }
+    @media screen and (min-width: $desktop1) {
+      font-size: 22px;
+      line-height: 32px;
+    }
+
+    & p {
+      line-height: 22px;
+      color: $white;
+      letter-spacing: 1.37px;
+      @media screen and (min-width: $tablet1) {
+        line-height: 24px;
+      }
+      @media screen and (min-width: $tablet2) {
+        line-height: 28px;
+      }
+      @media screen and (min-width: $desktop1) {
+        line-height: 32px;
+      }
+    }
+
+    & span {
+      position: relative;
+      display: inline;
+    }
+
+    & a {
+      color: $gold-2;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $gold;
+        transition: color 0.3s;
+
+        & + .tooltip-event {
+          @media screen and (min-width: $tablet2) {
+            transition: opacity 0.5s ease-out;
+            pointer-events: auto;
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  &__link {
+    font-family: 'Charter';
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    color: $gold-2;
+    border-bottom: 1px solid $gold-2;
+    margin-bottom: 40px;
+    transition: color 0.3s, border 0.3s;
+    @media screen and (min-width: $tablet1) {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 50px;
+    }
+    @media screen and (min-width: $tablet2) {
+      font-size: 17px;
+      line-height: 28px;
+      margin-bottom: 70px;
+    }
+
+    &:hover {
+      color: $gold;
+      border-bottom: 1px solid transparent;
+      transition: color 0.3s, border 0.3s;
+    }
+  }
+
+  &__img {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+
+    & img {
+      width: 100%;
+      object-position: center;
+      object-fit: contain;
+    }
+
+    &-name {
+      font-family: 'Charter';
+      font-weight: 700;
+      font-size: 10px;
+      line-height: 14px;
+      text-align: center;
+      color: $white;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      @media screen and (min-width: $tablet1) {
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+
+    &-description {
+      font-family: 'Charter';
+      font-weight: 400;
+      font-style: italic;
+      font-size: 10px;
+      line-height: 14px;
+      text-align: center;
+      color: #84969D;
+      margin-bottom: 30px;
+      @media screen and (min-width: $tablet1) {
+        font-size: 12px;
+        line-height: 16px;
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  &__description {
+    position: relative;
+    font-family: 'Charter';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: $white;
+    letter-spacing: 0.55px;
+    padding-bottom: 25px;
+    @media screen and (min-width: $tablet1) {
+      font-size: 16px;
+      line-height: 24px;
+      padding-bottom: 30px;
+    }
+    @media screen and (min-width: $tablet2) {
+      font-size: 17px;
+      line-height: 28px;
+      padding-bottom: 40px;
+    }
+    @media screen and (min-width: $desktop1) {
+      padding-bottom: 50px;
+    }
+
+    & p {
+      line-height: 20px;
+      color: $white;
+      letter-spacing: 0.55px;
+      @media screen and (min-width: $tablet1) {
+        line-height: 24px;
+      }
+      @media screen and (min-width: $tablet2) {
+        line-height: 28px;
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      width: 440px;
+      height: 1px;
+      background-color: #ACA076;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0.2;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      background: url("../img/tracery.svg") no-repeat;
+      background-position: center;
+      background-size: contain;
+      width: 32px;
+      height: 16px;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &__important {
+    position: relative;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: italic;
+    color: $gold-2;
+    text-align: center;
+    line-height: 20px;
+    max-width: 680px;
+    padding: 25px 0;
+    margin-bottom: 25px;
+    @media screen and (min-width: $tablet1) {
+      font-size: 18px;
+      line-height: 24px;
+      padding: 30px 0;
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width: $tablet2) {
+      font-size: 20px;
+      line-height: 28px;
+      padding: 40px 0;
+      margin-bottom: 40px;
+    }
+    @media screen and (min-width: $desktop1) {
+      font-size: 22px;
+      line-height: 32px;
+      padding: 50px 0;
+      margin-bottom: 50px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      width: 440px;
+      height: 1px;
+      background-color: #ACA076;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0.2;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      background: url("../img/tracery.svg") no-repeat;
+      background-position: center;
+      background-size: contain;
+      width: 32px;
+      height: 16px;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

@@ -1,0 +1,35 @@
+<section class="slider">
+  <div class="container">
+    <h2 class="title title-h2 title-white">Истории сотрудников</h2>
+    <a class="slider__more" href="employee.html">Посмотреть всех сотрудников</a>
+    <div class="slider__navigation">
+      <div class="swiper-button-prev">
+        <img class="sw-img" src="./img/slider-arrow.svg">
+        <img class="sw-img-h" src="./img/slider-arrow-hover.svg">
+      </div>
+      <div class="swiper-button-next">
+        <img class="sw-img" src="./img/slider-arrow.svg">
+        <img class="sw-img-h" src="./img/slider-arrow-hover.svg">
+      </div>
+    </div>
+  </div>
+  <div class="slider__wrap">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        @@for (var i = 0; i < context.arr.length; i++) {
+        <div class="swiper-slide">
+          <div class="slider__box">
+            <div class="slider__box-img">
+              <img src="`+context.arr[i].img+`" alt="">
+              <div class="slider__box-date">`+context.arr[i].date+`</div>
+            </div>
+            <div class="slider__box-name">`+context.arr[i].name+`</div>
+            <div class="slider__box-position">`+context.arr[i].position+`</div>
+            <a class="slider__box-link" href="`+context.arr[i].link+`"></a>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,999 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.underintro {
+  position: relative;
+  @media screen and (min-width: $tablet2) {
+    margin-top: -20px;
+  }
+  @media screen and (min-width: $desktop1) {
+    margin-top: -25px;
+  }
+  @media screen and (min-width: $desktop3) {
+    margin-top: -60px;
+  }
+
+  &__info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  &-detail {
+    & .underintro__description {
+      font-family: 'Charter';
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: 1.3px;
+      text-align: center;
+      margin-bottom: 70px;
+      @media screen and (min-width: $tablet1) {
+        font-size: 18px;
+        line-height: 24px;
+      }
+      @media screen and (min-width: $tablet2) {
+        font-size: 20px;
+        line-height: 28px;
+      }
+      @media screen and (min-width: $desktop1) {
+        font-size: 22px;
+        line-height: 32px;
+      }
+    }
+
+    & .underintro__img {
+      position: relative;
+      min-width: 250px;
+      height: 468px;
+      overflow: hidden;
+
+      & img {
+        width: 100%;
+        height: 100%;
+        object-position: center;
+        object-fit: contain;
+      }
+    }
+  }
+
+  &-awards {
+    padding-bottom: 60px;
+
+    & .underintro__description {
+      font-family: 'Charter';
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: 1.3px;
+      text-align: center;
+      margin-bottom: 40px;
+      @media screen and (min-width: $tablet1) {
+        font-size: 18px;
+        line-height: 24px;
+      }
+      @media screen and (min-width: $tablet2) {
+        font-size: 20px;
+        line-height: 28px;
+      }
+      @media screen and (min-width: $desktop1) {
+        font-size: 22px;
+        line-height: 32px;
+      }
+    }
+
+    & .underintro__img {
+      position: relative;
+      min-width: 180px;
+      height: 324px;
+      overflow: hidden;
+      @media screen and (min-width: $tablet1) {
+        min-width: 240px;
+        height: 432px;
+      }
+      @media screen and (min-width: $tablet2) {
+        min-width: 300px;
+        height: 540px;
+      }
+
+      & img {
+        width: 100%;
+        height: 100%;
+        object-position: center;
+        object-fit: contain;
+      }
+    }
+  }
+
+  &-memorial {
+    position: relative;
+    z-index: 3;
+
+    & .underintro__address {
+      position: relative;
+      font-size: 16px;
+      font-weight: 700;
+      color: #0f4075;
+      text-align: center;
+      line-height: 22px;
+      padding: 0 0 25px;
+      @media screen and (min-width: $tablet1) {
+        font-size: 18px;
+        line-height: 24px;
+        padding: 0 0 30px;
+      }
+      @media screen and (min-width: $tablet2) {
+        font-size: 20px;
+        line-height: 28px;
+        padding: 0 0 40px;
+      }
+      @media screen and (min-width: $desktop1) {
+        font-size: 22px;
+        line-height: 32px;
+        padding: 0 0 50px;
+      }
+    }
+
+    & .underintro__description {
+      position: relative;
+      font-size: 16px;
+      font-weight: 700;
+      font-style: italic;
+      color: $gold-2;
+      text-align: center;
+      line-height: 22px;
+      margin-top: 5px;
+      padding: 25px 0;
+      @media screen and (min-width: $tablet1) {
+        font-size: 18px;
+        line-height: 24px;
+        padding: 30px 0;
+      }
+      @media screen and (min-width: $tablet2) {
+        font-size: 20px;
+        line-height: 28px;
+        padding: 40px 0;
+      }
+      @media screen and (min-width: $desktop1) {
+        font-size: 22px;
+        line-height: 32px;
+        padding: 50px 0;
+      }
+
+      & p {
+        color: $gold-2;
+        line-height: 22px;
+        @media screen and (min-width: $tablet1) {
+          line-height: 24px;
+        }
+        @media screen and (min-width: $tablet2) {
+          line-height: 28px;
+        }
+        @media screen and (min-width: $desktop1) {
+          line-height: 32px;
+        }
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        width: 440px;
+        height: 1px;
+        background-color: #ACA076;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0.2;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        background: url("../img/tracery.svg") no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 32px;
+        height: 16px;
+        top: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &.long {
+        background-color: $white;
+
+        & .underintro__description-box {
+          position: relative;
+          overflow: hidden;
+          transition: max-height 3s ease-out, opacity 3s ease-out;
+          max-height: 200px;
+          background-color: $white;
+          @media screen and (min-width: $tablet1) {
+            transition: max-height 2s ease-out, opacity 2s ease-out;
+            max-height: 250px;
+          }
+
+          &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100px;
+            left: 0;
+            bottom: 0;
+            background: linear-gradient(to top, $white 40px, rgba(255,255,255, 0) 100%);
+            transition: height 2s;
+          }
+        }
+
+        &.active {
+          & .underintro__description-box {
+            max-height: 3000px;
+            opacity: 1;
+            /*overflow: visible;*/
+            transition: max-height 3s ease-in, opacity 3s ease-in;
+            @media screen and (min-width: $tablet1) {
+              max-height: 1500px;
+              transition: max-height 2s ease-in, opacity 2s ease-in;
+            }
+
+            &:before {
+              height: 0;
+              transition: height 2s;
+            }
+          }
+        }
+      }
+
+      &-more {
+        position: relative;
+        font-family: 'Charter';
+        font-size: 14px;
+        font-weight: 700;
+        font-style: normal;
+        display: block;
+        width: max-content;
+        color: $gold-2;
+        padding: 5px 0;
+        transition: color 0.3s, font-size 0.5s, padding 0.5s;
+        margin: 0 auto;
+        @media screen and (min-width: $tablet1) {
+          font-size: 17px;
+          padding: 10px 0;
+        }
+
+        &:hover {
+          color: $gold;
+          transition: color 0.3s, font-size 0.3s;
+
+          &:before {
+            opacity: 1;
+            border-bottom: 1px dashed $gold;
+            transition: opacity 0.3s, border 0.3s;
+          }
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 0;
+          left: 0;
+          bottom: 0;
+          opacity: 0.6;
+          border-bottom: 1px dashed $gold-2;
+          transition: opacity 0.3s, border 0.3s;
+        }
+      }
+    }
+
+    & .underintro__slider {
+      position: relative;
+      width: 100%;
+
+      & .swiper-container {
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+      }
+
+      & .swiper-slide {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        @media screen and (min-width: $mobile2) {
+          height: 400px;
+        }
+        @media screen and (min-width: $tablet1) {
+          height: 460px;
+        }
+        @media screen and (min-width: $tablet2) {
+          height: 600px;
+        }
+      }
+
+      & .swiper-button-next,
+      & .swiper-button-prev {
+        position: absolute;
+        display: block;
+        border-radius: 50%;
+        outline: none;
+        width: 36px;
+        height: 36px;
+        top: 155px;
+        transition: all 0.3s;
+        @media screen and (min-width: $mobile2) {
+          top: 200px;
+        }
+        @media screen and (min-width: $tablet1) {
+          width: 56px;
+          height: 56px;
+          top: 230px;
+        }
+        @media screen and (min-width: $tablet2) {
+          top: 300px;
+        }
+
+        &.swiper-button-disabled {
+          display: none;
+        }
+
+        &:after {
+          content: '';
+        }
+
+        & img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          object-position: center;
+          object-fit: contain;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          &.sw-img {
+            opacity: 1;
+            transition: opacity 0.3s;
+          }
+
+          &.sw-img-h {
+            opacity: 0;
+            transition: opacity 0.3s;
+          }
+        }
+
+        &:hover{
+          & img.sw-img {
+            opacity: 0;
+            transition: opacity 0.3s;
+          }
+
+          & img.sw-img-h {
+            opacity: 1;
+            transition: opacity 0.3s;
+          }
+        }
+      }
+
+      & .swiper-button-prev {
+        left: 2%;
+        @media screen and (min-width: $tablet2) {
+          left: -67px;
+        }
+        @media screen and (min-width: $desktop1) {
+          left: -130px;
+        }
+      }
+
+      & .swiper-button-next {
+        right: 2%;
+        @media screen and (min-width: $tablet2) {
+          right: -67px;
+        }
+        @media screen and (min-width: $desktop1) {
+          right: -130px;
+        }
+
+        & img {
+          transform: rotate(180deg) translate(50%, 50%);
+        }
+      }
+    }
+
+    & .underintro__img {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      line-height: 0;
+
+      &:before {
+        content: '';
+        position: absolute;
+        background-color: $blue;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: url("../img/icon-search-gold.svg") no-repeat;
+        background-position: center;
+        background-size: contain;
+        opacity: 0;
+        transition: opacity 0.3s;
+        @media screen and (min-width: $tablet1) {
+          width: 50px;
+          height: 50px;
+        }
+      }
+
+      &:hover {
+        &:before {
+          opacity: 0.78;
+          transition: opacity 0.5s;
+        }
+
+        &:after {
+          opacity: 1;
+          transition: opacity 0.5s;
+        }
+      }
+
+      & img {
+        max-width: 100%;
+        max-height: 300px;
+        height: auto;
+        width: auto;
+        object-position: center;
+        object-fit: contain;
+        @media screen and (min-width: $mobile2) {
+          max-height: 400px;
+        }
+        @media screen and (min-width: $tablet1) {
+          max-height: 460px;
+        }
+        @media screen and (min-width: $tablet2) {
+          max-height: 600px;
+        }
+      }
+
+      &-link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+      }
+
+      &-name {
+        font-family: 'Charter';
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 14px;
+        text-align: center;
+        color: $white;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        @media screen and (min-width: $tablet1) {
+          font-size: 12px;
+          line-height: 16px;
+          margin-top: 20px;
+        }
+      }
+
+      &-description {
+        font-family: 'Charter';
+        font-size: 10px;
+        font-weight: 400;
+        font-style: italic;
+        line-height: 14px;
+        color: $gold-2;
+        @media screen and (min-width: $tablet1) {
+          font-size: 12px;
+          line-height: 16px;
+        }
+      }
+    }
+  }
+
+  &-person-one {
+    & .underintro__info {
+      max-width: 900px;
+    }
+
+    & .underintro__description {
+      font-family: 'Charter';
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+      max-width: 680px;
+      letter-spacing: 1.37px;
+      text-align: center;
+      margin: 0 auto 40px;
+      @media screen and (min-width: $tablet1) {
+        font-size: 18px;
+        line-height: 24px;
+        margin: 0 auto 60px;
+      }
+      @media screen and (min-width: $tablet2) {
+        font-size: 20px;
+        line-height: 28px;
+      }
+      @media screen and (min-width: $desktop1) {
+        font-size: 22px;
+        line-height: 32px;
+      }
+    }
+
+    & .underintro__wrap {
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 25px;
+      @media screen and (min-width: $tablet1) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        max-width: 738px;
+        margin: 0 auto 30px;
+      }
+      @media screen and (min-width: $tablet2) {
+        margin-bottom: 40px;
+        max-width: none;
+      }
+      @media screen and (min-width: $desktop1) {
+        margin-bottom: 50px;
+      }
+    }
+
+    & .underintro__img {
+      position: relative;
+      width: 100%;
+      max-width: 515px;
+      overflow: hidden;
+      margin: 0 auto;
+      line-height: 0;
+      @media screen and (min-width: $tablet1) {
+        width: 420px;
+        min-width: 420px;
+        max-width: auto;
+        height: 550px;
+        margin: 0;
+      }
+      @media screen and (min-width: $tablet2) {
+        width: 515px;
+        min-width: 515px;
+        height: 670px;
+      }
+
+      & img {
+        width: 100%;
+        height: 100%;
+        object-position: center;
+        object-fit: cover;
+      }
+
+      &-info {
+        padding: 10px 0;
+        order: -1;
+        @media screen and (min-width: $tablet1) {
+          padding: 25px;
+          order: 2;
+        }
+      }
+
+      &-name {
+        font-family: 'Charter';
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 14px;
+        margin-bottom: 5px;
+        text-align: center;
+        @media screen and (min-width: $tablet1) {
+          font-size: 12px;
+          line-height: 16px;
+          margin-top: 20px;
+          text-align: left;
+        }
+      }
+
+      &-description {
+        font-family: 'Charter';
+        font-weight: 400;
+        font-style: italic;
+        font-size: 10px;
+        line-height: 14px;
+        text-align: center;
+        color: #84969D;
+        @media screen and (min-width: $tablet1) {
+          font-size: 12px;
+          line-height: 16px;
+          text-align: left;
+        }
+      }
+    }
+
+    & .underintro__box {
+      background-color: #093A65;
+      width: 100%;
+      max-width: 515px;
+      padding: 25px;
+      margin: 0 auto;
+      @media screen and (min-width: $tablet1) {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        max-width: none;
+        width: 350px;
+      }
+      @media screen and (min-width: $tablet2) {
+        width: 415px;
+        padding: 35px 27px 50px;
+      }
+
+      &-caption {
+        position: relative;
+        font-family: 'Charter';
+        font-weight: 700;
+        font-style: italic;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+        color: $gold-2;
+        padding: 0 0 25px;
+        @media screen and (min-width: $tablet1) {
+          font-size: 18px;
+          line-height: 24px;
+        }
+        @media screen and (min-width: $tablet2) {
+          font-size: 20px;
+          line-height: 28px;
+        }
+        @media screen and (min-width: $desktop1) {
+          font-size: 22px;
+          line-height: 32px;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          background-color: #ACA076;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          opacity: 0.2;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          background: url("../img/tracery.svg") no-repeat;
+          background-position: center;
+          background-size: contain;
+          width: 32px;
+          height: 16px;
+          bottom: -8px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+
+      &-description {
+        font-family: 'Charter';
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 18px;
+        color: $white;
+        text-align: center;
+        margin-top: 25px;
+        @media screen and (min-width: $tablet1) {
+          font-size: 14px;
+          line-height: 26px;
+        }
+      }
+    }
+
+    & .underintro__text {
+      position: relative;
+      font-size: 16px;
+      font-weight: 700;
+      font-style: italic;
+      color: $gold-2;
+      text-align: center;
+      line-height: 22px;
+      max-width: 780px;
+      padding-top: 25px;
+      margin-bottom: 25px;
+      margin-top: 40px;
+      @media screen and (min-width: $tablet1) {
+        font-size: 18px;
+        line-height: 24px;
+        padding-top: 30px;
+      }
+      @media screen and (min-width: $tablet2) {
+        font-size: 20px;
+        line-height: 28px;
+        padding-top: 40px;
+      }
+      @media screen and (min-width: $desktop1) {
+        font-size: 22px;
+        line-height: 32px;
+        padding-top: 50px;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        width: 440px;
+        height: 1px;
+        background-color: #ACA076;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0.2;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        background: url("../img/tracery.svg") no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 32px;
+        height: 16px;
+        top: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &-author {
+        font-family: 'Charter';
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 14px;
+        text-align: center;
+        margin-bottom: 5px;
+        @media screen and (min-width: $tablet1) {
+          font-size: 12px;
+          line-height: 16px;
+          margin-top: 20px;
+        }
+      }
+
+      &-link {
+        font-family: 'Charter';
+        font-weight: 400;
+        font-style: italic;
+        font-size: 10px;
+        line-height: 14px;
+        color: $blue;
+        transition: color 0.3s;
+        @media screen and (min-width: $tablet1) {
+          font-size: 12px;
+          line-height: 16px;
+        }
+
+        &:hover {
+          color: #093A65;
+          transition: color 0.3s;
+        }
+      }
+
+      &-container {
+        &.long {
+
+          & .underintro__text-box {
+            position: relative;
+            overflow: hidden;
+            transition: max-height 3s ease-out, opacity 3s ease-out;
+            max-height: 200px;
+            @media screen and (min-width: $tablet1) {
+              transition: max-height 2s ease-out, opacity 2s ease-out;
+              max-height: 250px;
+            }
+
+            &:before {
+              content: '';
+              position: absolute;
+              width: 100%;
+              height: 100px;
+              left: 0;
+              bottom: 0;
+              /*background: linear-gradient(to top, $white 40px, rgba(255,255,255, 0) 100%);*/
+              transition: height 2s;
+            }
+          }
+
+          &.active {
+            & .underintro__text-box {
+              max-height: 3000px;
+              opacity: 1;
+              /*overflow: visible;*/
+              transition: max-height 3s ease-in, opacity 3s ease-in;
+              @media screen and (min-width: $tablet1) {
+                max-height: 1500px;
+                transition: max-height 2s ease-in, opacity 2s ease-in;
+              }
+
+              &:before {
+                height: 0;
+                transition: height 2s;
+              }
+            }
+          }
+        }
+      }
+
+      &-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      &-more {
+        position: relative;
+        font-family: 'Charter';
+        font-size: 14px;
+        font-weight: 700;
+        display: block;
+        width: max-content;
+        color: $gold-2;
+        padding: 5px 0;
+        transition: color 0.3s, font-size 0.5s, padding 0.5s;
+        margin: 0 auto;
+        @media screen and (min-width: $tablet1) {
+          font-size: 17px;
+          padding: 10px 0;
+        }
+
+        &:hover {
+          color: $gold;
+          transition: color 0.3s, font-size 0.3s;
+
+          &:before {
+            opacity: 1;
+            border-bottom: 1px dashed $gold;
+            transition: opacity 0.3s, border 0.3s;
+          }
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 0;
+          left: 0;
+          bottom: 0;
+          opacity: 0.6;
+          border-bottom: 1px dashed $gold-2;
+          transition: opacity 0.3s, border 0.3s;
+        }
+      }
+    }
+  }
+
+  &-person-two {
+    & .underintro__description {
+      position: relative;
+      font-size: 16px;
+      font-weight: 700;
+      font-style: italic;
+      color: $gold-2;
+      text-align: center;
+      line-height: 22px;
+      margin-top: 5px;
+      padding: 25px 0;
+      @media screen and (min-width: $tablet1) {
+        font-size: 18px;
+        line-height: 24px;
+        padding: 30px 0;
+      }
+      @media screen and (min-width: $tablet2) {
+        font-size: 20px;
+        line-height: 28px;
+        padding: 40px 0;
+      }
+      @media screen and (min-width: $desktop1) {
+        font-size: 22px;
+        line-height: 32px;
+        padding: 50px 0;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        width: 440px;
+        height: 1px;
+        background-color: #ACA076;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0.2;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        background: url("../img/tracery.svg") no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 32px;
+        height: 16px;
+        top: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    & .underintro__img {
+      position: relative;
+      max-width: 500px;
+      width: 100%;
+      overflow: hidden;
+
+      & img {
+        width: 100%;
+        height: 100%;
+        object-position: center;
+        object-fit: contain;
+      }
+
+      &-name {
+        font-family: 'Charter';
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 14px;
+        color: $white;
+        max-width: 440px;
+        text-align: center;
+        margin: 5px auto 0;
+        @media screen and (min-width: $tablet1) {
+          font-size: 12px;
+          line-height: 16px;
+          margin-top: 20px;
+        }
+      }
+
+      &-description {
+        font-family: 'Charter';
+        font-size: 10px;
+        font-weight: 400;
+        font-style: italic;
+        line-height: 14px;
+        color: $gold-2;
+        margin: 0 auto;
+        @media screen and (min-width: $tablet1) {
+          font-size: 12px;
+          line-height: 16px;
+        }
+      }
+    }
+  }
+}

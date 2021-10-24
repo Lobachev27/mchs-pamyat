@@ -1,0 +1,660 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.intro {
+  position: relative;
+  padding: 20px 0 380px;
+  z-index: 1;
+  @media screen and (min-width: $tablet1) {
+    padding: 40px 0 500px;
+  }
+  @media screen and (min-width: $tablet2) {
+    padding: 60px 0 510px;
+  }
+  @media screen and (min-width: $desktop1) {
+    padding: 80px 0 570px;
+  }
+  @media screen and (min-width: $desktop3) {
+    padding: 80px 0 620px;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100vw;
+    background-color: $blue;
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      width: 100vw;
+      background: url("../img/bg-photo-1.png") no-repeat;
+      background-position: center bottom;
+      background-size: cover;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      border-left: 50vw solid transparent;
+      border-right: 50vw solid $white;
+      border-top: 30px solid transparent;
+      border-bottom: 30px solid $white;
+      @media screen and (min-width: $tablet1) {
+        border-top: 60px solid transparent;
+        border-bottom: 60px solid $white;
+      }
+      @media screen and (min-width: $tablet2) {
+        border-top: 90px solid transparent;
+        border-bottom: 90px solid $white;
+      }
+      @media screen and (min-width: $desktop1) {
+        border-top: 110px solid transparent;
+        border-bottom: 110px solid $white;
+      }
+      @media screen and (min-width: $desktop3) {
+        border-top: 150px solid transparent;
+        border-bottom: 150px solid $white;
+      }
+    }
+  }
+
+  &__info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    width: 70px;
+    @media screen and (min-width: $tablet1) {
+      width: 90px;
+    }
+    @media screen and (min-width: $tablet2) {
+      width: 100px;
+    }
+    @media screen and (min-width: $desktop1) {
+      width: 122px;
+    }
+  }
+
+  &__mchs {
+    font-family: 'Charter';
+    font-size: 16px;
+    font-weight: 700;
+    color: $gold-2;
+    margin: 12px 0;
+    @media screen and (min-width: $tablet1) {
+      font-size: 18px;
+      margin: 15px 0;
+    }
+    @media screen and (min-width: $tablet2) {
+      font-size: 20px;
+      margin: 20px 0;
+    }
+    @media screen and (min-width: $desktop1) {
+      font-size: 24px;
+      margin: 35px 0;
+    }
+  }
+
+  &__description {
+    position: relative;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: italic;
+    color: $white;
+    text-align: center;
+    line-height: 22px;
+    max-width: 660px;
+    margin-top: 10px;
+    padding-bottom: 25px;
+    @media screen and (min-width: $tablet1) {
+      font-size: 18px;
+      line-height: 24px;
+      padding-bottom: 30px;
+    }
+    @media screen and (min-width: $tablet2) {
+      font-size: 20px;
+      line-height: 28px;
+      padding-bottom: 40px;
+    }
+    @media screen and (min-width: $desktop1) {
+      font-size: 22px;
+      line-height: 32px;
+      padding-bottom: 50px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      width: 440px;
+      height: 1px;
+      background-color: #ACA076;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0.2;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      background: url("../img/tracery.svg") no-repeat;
+      background-position: center;
+      background-size: contain;
+      width: 32px;
+      height: 16px;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    padding-top: 25px;
+    @media screen and (min-width: $tablet1) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 30px;
+    }
+    @media screen and (min-width: $tablet2) {
+      padding-top: 40px;
+    }
+    @media screen and (min-width: $desktop1) {
+      flex-wrap: nowrap;
+      justify-content: center;
+      padding-top: 50px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+    @media screen and (min-width: $tablet1) {
+      width: calc(50% - 40px);
+      align-items: flex-start;
+      margin-bottom: 30px;
+      margin-right: 60px;
+    }
+    @media screen and (min-width: $tablet2) {
+      align-items: center;
+    }
+    @media screen and (min-width: $desktop1) {
+      width: calc(33.33% - 40px);
+      align-items: flex-start;
+      margin-bottom: 0;
+      margin-right: 80px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      margin-right: 0;
+    }
+
+    &:nth-child(2n) {
+      @media screen and (min-width: $tablet1) {
+        margin-right: 0;
+      }
+      @media screen and (min-width: $desktop1) {
+        margin-right: 60px;
+      }
+    }
+  }
+
+  &__amount {
+    font-family: 'Proxima Nova';
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 40px;
+    color: $gold-2;
+    min-width: 72px;
+    text-align: right;
+    margin-right: 15px;
+    @media screen and (min-width: $mobile1) {
+      font-size: 50px;
+      line-height: 50px;
+      min-width: 86px;
+    }
+    @media screen and (min-width: $tablet1) {
+      font-size: 60px;
+      line-height: 48px;
+      min-width: auto;
+      text-align: left;
+      margin-right: 20px;
+    }
+    @media screen and (min-width: $tablet2) {
+      font-size: 80px;
+      line-height: 68px;
+      margin-right: 28px;
+    }
+  }
+
+  &__name {
+    font-size: 14px;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 20px;
+    color: $white;
+    @media screen and (min-width: $tablet1) {
+      font-size: 15px;
+      line-height: 24px;
+    }
+    @media screen and (min-width: $tablet2) {
+      font-size: 17px;
+      line-height: 28px;
+    }
+  }
+
+  &-employee {
+    padding: 5px 0 240px;
+    @media screen and (min-width: $tablet1) {
+      padding: 5px 0 240px;
+    }
+    @media screen and (min-width: $tablet2) {
+      padding: 5px 0 340px;
+    }
+    @media screen and (min-width: $desktop1) {
+      padding: 5px 0 340px;
+    }
+    @media screen and (min-width: $desktop3) {
+      padding: 5px 0 370px;
+    }
+
+    &.intro-memorial {
+      & .intro-employee__info {
+        padding-bottom: 30px;
+        @media screen and (min-width: $tablet1) {
+          padding-bottom: 50px;
+        }
+      }
+
+      &.intro-employee-afn {
+        & .intro__bg:after {
+          display: none;
+        }
+      }
+    }
+
+    &__info {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding-bottom: 50px;
+      margin: 0 auto;
+
+      @media screen and (min-width: $tablet1) {
+        padding-bottom: 130px;
+      }
+
+      & .title {
+        position: relative;
+        padding-bottom: 20px;
+        @media screen and (min-width: $tablet1) {
+          padding-bottom: 25px;
+        }
+        @media screen and (min-width: $tablet2) {
+          padding-bottom: 35px;
+        }
+        @media screen and (min-width: $desktop1) {
+          padding-bottom: 45px;
+        }
+        &:before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          max-width: 440px;
+          height: 1px;
+          background-color: #ACA076;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          opacity: 0.2;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          background: url("../img/tracery.svg") no-repeat;
+          background-position: center;
+          background-size: contain;
+          width: 32px;
+          height: 16px;
+          bottom: -8px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+
+      & .intro__description {
+        max-width: 700px;
+        margin-top: 25px;
+        padding: 0;
+        @media screen and (min-width: $tablet1) {
+          margin-top: 30px;
+        }
+        @media screen and (min-width: $tablet2) {
+          margin-top: 40px;
+        }
+        @media screen and (min-width: $desktop1) {
+          margin-top: 50px;
+        }
+
+        &:before {
+          display: none;
+        }
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    &__text {
+      position: relative;
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: $gold-2;
+      @media screen and (min-width: $tablet1) {
+        font-size: 18px;
+        line-height: 22px;
+      }
+      @media screen and (min-width: $tablet2) {
+        font-size: 21px;
+        line-height: 25px;
+      }
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 1px;
+        background-color: $gold;
+        opacity: 0.3;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &:before {
+        left: -60px;
+      }
+
+      &:after {
+        right: -60px;
+      }
+    }
+    & .search__form {
+      margin-top: 15px;
+      @media screen and (min-width: $tablet1) {
+        margin-top: 20px;
+      }
+      @media screen and (min-width: $tablet2) {
+        margin-top: 30px;
+      }
+      @media screen and (min-width: $desktop1) {
+        margin-top: 40px;
+      }
+    }
+
+    & .search__show {
+      @media screen and (min-width: $tablet1) {
+        margin-top: 0;
+        margin-left: 0;
+      }
+    }
+  }
+
+  &-awards {
+    padding: 5px 0 60px;
+    @media screen and (min-width: $tablet1) {
+      padding: 5px 0 120px;
+    }
+    @media screen and (min-width: $tablet2) {
+      padding: 5px 0 180px;
+    }
+    @media screen and (min-width: $desktop1) {
+      padding: 5px 0 220px;
+    }
+    @media screen and (min-width: $desktop3) {
+      padding: 5px 0 300px;
+    }
+
+    &__info {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding-bottom: 0;
+      margin: 0 auto;
+
+      & .title {
+        position: relative;
+        padding-bottom: 20px;
+        @media screen and (min-width: $tablet1) {
+          padding-bottom: 25px;
+        }
+        @media screen and (min-width: $tablet2) {
+          padding-bottom: 35px;
+        }
+        @media screen and (min-width: $desktop1) {
+          padding-bottom: 45px;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          max-width: 440px;
+          height: 1px;
+          background-color: #ACA076;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          opacity: 0.2;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          background: url("../img/tracery.svg") no-repeat;
+          background-position: center;
+          background-size: contain;
+          width: 32px;
+          height: 16px;
+          bottom: -8px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+
+      & .intro__description {
+        max-width: 800px;
+        margin-top: 25px;
+        padding: 0;
+        @media screen and (min-width: $tablet1) {
+          margin-top: 30px;
+        }
+        @media screen and (min-width: $tablet2) {
+          margin-top: 40px;
+        }
+        @media screen and (min-width: $desktop1) {
+          margin-top: 50px;
+        }
+
+        &:before {
+          display: none;
+        }
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &-detail {
+    padding: 5px 0 0;
+    @media screen and (min-width: $tablet1) {
+      padding: 5px 0;
+    }
+    @media screen and (min-width: $tablet2) {
+      padding: 5px 0 20px;
+    }
+    @media screen and (min-width: $desktop1) {
+      padding: 5px 0 25px;
+    }
+    @media screen and (min-width: $desktop3) {
+      padding: 5px 0 60px;
+    }
+
+    & .intro__bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100vw;
+      background-color: #F8F8F8;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    & .title {
+      max-width: 660px;
+      padding-bottom: 25px;
+      @media screen and (min-width: $tablet1) {
+        display: flex;
+        align-items: center;
+        min-height: 104px;
+        padding-bottom: 30px;
+      }
+      @media screen and (min-width: $tablet2) {
+        max-width: 800px;
+        min-height: 132px;
+        padding-bottom: 40px;
+      }
+      @media screen and (min-width: $desktop1) {
+        max-width: 1000px;
+        min-height: 164px;
+        padding-bottom: 50px;
+      }
+    }
+
+    &__text {
+      position: relative;
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: #093A65;
+      @media screen and (min-width: $tablet1) {
+        font-size: 18px;
+        line-height: 22px;
+      }
+      @media screen and (min-width: $tablet2) {
+        font-size: 21px;
+        line-height: 25px;
+      }
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 1px;
+        background-color: $gold;
+        opacity: 1;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &:before {
+        left: -60px;
+      }
+
+      &:after {
+        right: -60px;
+      }
+    }
+
+    &__info {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding-bottom: 0;
+      margin: 0 auto;
+
+      & .breadcrumbs {
+        & span{
+          color: #ACACAC;
+        }
+
+        &__link{
+          color: #ACACAC;
+
+          &:hover {
+            color: #0F4075;
+          }
+
+          &:last-child{
+            color: #ACACAC;
+          }
+        }
+      }
+    }
+
+    &__date {
+      font-family: 'Charter';
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 24px;
+      color: $gold-2;
+      margin-top: 0;
+      margin-bottom: 20px;
+      @media screen and (min-width: $tablet1) {
+        font-size: 20px;
+        line-height: 28px;
+      }
+      @media screen and (min-width: $tablet2) {
+        font-size: 24px;
+        line-height: 38px;
+        margin-top: -10px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

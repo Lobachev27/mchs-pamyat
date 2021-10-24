@@ -1,0 +1,390 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.awards {
+  position: relative;
+
+  &__list {
+    list-style: none;
+    z-index: 2;
+  }
+
+  &__item {
+    position: relative;
+
+    & .container {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      @media screen and (min-width: $tablet1) {
+        padding-top: 40px;
+        padding-bottom: 0;
+      }
+    }
+
+    &:nth-child(odd) {
+      @media screen and (min-width: $tablet2) {
+        margin-top: -90px;
+      }
+      @media screen and (min-width: $desktop1) {
+        margin-top: -110px;
+      }
+      @media screen and (min-width: $desktop3) {
+        margin-top: -150px;
+      }
+    }
+
+    &:nth-child(even) {
+      padding: 60px 0;
+      @media screen and (min-width: $tablet1) {
+        padding: 120px 0;
+      }
+      @media screen and (min-width: $tablet2) {
+        padding: 90px 0;
+        margin-top: -90px;
+      }
+      @media screen and (min-width: $desktop1) {
+        padding: 110px 0;
+        margin-top: -110px;
+      }
+      @media screen and (min-width: $desktop3) {
+        padding: 150px 0;
+        margin-top: -150px;
+      }
+
+      & .awards__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100vw;
+        background-color: $blue;
+        z-index: -1;
+
+        &-img {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 100%;
+          width: 100vw;
+          background: url("../img/bg-photo-1.png") no-repeat;
+          background-position: center bottom;
+          background-size: cover;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 0;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          border-right: 50vw solid transparent;
+          border-left: 50vw solid $white;
+          border-bottom: 30px solid transparent;
+          border-top: 30px solid $white;
+          z-index: 2;
+          @media screen and (min-width: $tablet1) {
+            border-bottom: 60px solid transparent;
+            border-top: 60px solid $white;
+          }
+          @media screen and (min-width: $tablet2) {
+            border-bottom: 90px solid transparent;
+            border-top: 90px solid $white;
+          }
+          @media screen and (min-width: $desktop1) {
+            border-bottom: 110px solid transparent;
+            border-top: 110px solid $white;
+          }
+          @media screen and (min-width: $desktop3) {
+            border-bottom: 150px solid transparent;
+            border-top: 150px solid $white;
+          }
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 0;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          border-left: 50vw solid transparent;
+          border-right: 50vw solid $white;
+          border-top: 30px solid transparent;
+          border-bottom: 30px solid $white;
+          z-index: 2;
+          @media screen and (min-width: $tablet1) {
+            border-top: 60px solid transparent;
+            border-bottom: 60px solid $white;
+          }
+          @media screen and (min-width: $tablet2) {
+            border-top: 90px solid transparent;
+            border-bottom: 90px solid $white;
+          }
+          @media screen and (min-width: $desktop1) {
+            border-top: 110px solid transparent;
+            border-bottom: 110px solid $white;
+          }
+          @media screen and (min-width: $desktop3) {
+            border-top: 150px solid transparent;
+            border-bottom: 150px solid $white;
+          }
+        }
+      }
+
+      & .awards__box-img {
+        @media screen and (min-width: $tablet2) {
+          order: 2;
+        }
+      }
+
+      & .awards__box-description {
+        color: $white;
+      }
+    }
+  }
+
+  &__box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 970px;
+    margin: 0 auto;
+    @media screen and (min-width: $tablet2) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-img {
+      position: relative;
+      min-width: 229px;
+      height: 324px;
+      overflow: hidden;
+      @media screen and (min-width: $tablet1) {
+        min-width: 250px;
+        height: 380px;
+      }
+      @media screen and (min-width: $tablet2) {
+        min-width: 250px;
+        height: 468px;
+      }
+
+      & img {
+        width: 100%;
+        height: 100%;
+        object-position: center;
+        object-fit: contain;
+      }
+    }
+
+    &-info {
+      margin-top: 20px;
+      @media screen and (min-width: $tablet2) {
+        width: calc(100% - 365px);
+        margin-top: 0;
+      }
+    }
+
+    &-name {
+      font-family: 'Proxima Nova';
+      font-size: 22px;
+      font-weight: 900;
+      line-height: 28px;
+      text-align: center;
+      color: $gold-2;
+      text-transform: uppercase;
+      @media screen and (min-width: $tablet1) {
+        font-size: 28px;
+        line-height: 36px;
+      }
+      @media screen and (min-width: $tablet2) {
+        font-size: 36px;
+        line-height: 44px;
+        text-align: left;
+        max-width: 640px;
+      }
+    }
+
+    &-description {
+      font-family: 'Charter';
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 1.4px;
+      text-align: center;
+      margin: 10px 0 20px;
+      @media screen and (min-width: $tablet1) {
+        font-size: 16px;
+        line-height: 24px;
+        margin: 20px 0 30px;
+      }
+      @media screen and (min-width: $tablet2) {
+        font-size: 17px;
+        line-height: 28px;
+        max-width: 570px;
+        text-align: left;
+        margin: 20px 0 40px;
+      }
+    }
+
+    & .btn-gold {
+      width: max-content;
+      margin: 0 auto;
+      @media screen and (min-width: $tablet2) {
+        margin: 0;
+      }
+
+      &:hover {
+        background-color: $gold;
+        border: 2px solid $gold;
+      }
+    }
+  }
+
+  &-detail {
+    position: relative;
+    padding: 0 0 70px;
+    margin-top: -120px;
+    @media screen and (min-width: $tablet1) {
+      padding: 0 0 120px;
+      margin-top: -200px;
+    }
+    @media screen and (min-width: $tablet2) {
+      padding: 0 0 180px;
+      margin-top: -250px;
+    }
+    @media screen and (min-width: $desktop1) {
+      padding: 0 0 220px;
+      margin-top: -250px;
+    }
+    @media screen and (min-width: $desktop3) {
+      padding: 0 0 300px;
+      margin-top: -300px;
+    }
+
+    &__bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100vw;
+      background-color: #F8F8F8;
+      z-index: -1;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        border-right: 50vw solid transparent;
+        border-left: 50vw solid $white;
+        border-bottom: 30px solid transparent;
+        border-top: 30px solid $white;
+        z-index: 2;
+        @media screen and (min-width: $tablet1) {
+          border-bottom: 60px solid transparent;
+          border-top: 60px solid $white;
+        }
+        @media screen and (min-width: $tablet2) {
+          border-bottom: 90px solid transparent;
+          border-top: 90px solid $white;
+        }
+        @media screen and (min-width: $desktop1) {
+          border-bottom: 110px solid transparent;
+          border-top: 110px solid $white;
+        }
+        @media screen and (min-width: $desktop3) {
+          border-bottom: 150px solid transparent;
+          border-top: 150px solid $white;
+        }
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        border-left: 50vw solid transparent;
+        border-right: 50vw solid $white;
+        border-top: 30px solid transparent;
+        border-bottom: 30px solid $white;
+        z-index: 2;
+        @media screen and (min-width: $tablet1) {
+          border-top: 60px solid transparent;
+          border-bottom: 60px solid $white;
+        }
+        @media screen and (min-width: $tablet2) {
+          border-top: 90px solid transparent;
+          border-bottom: 90px solid $white;
+        }
+        @media screen and (min-width: $desktop1) {
+          border-top: 110px solid transparent;
+          border-bottom: 110px solid $white;
+        }
+        @media screen and (min-width: $desktop3) {
+          border-top: 150px solid transparent;
+          border-bottom: 150px solid $white;
+        }
+      }
+    }
+
+    &__info {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 770px;
+      padding-top: 170px;
+      margin: 0 auto;
+      @media screen and (min-width: $tablet1) {
+        padding-top: 250px;
+      }
+      @media screen and (min-width: $tablet2) {
+        padding-top: 300px;
+      }
+      @media screen and (min-width: $desktop3) {
+        padding-top: 350px;
+      }
+    }
+
+    &__description {
+      font-family: 'Charter';
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      text-align: center;
+      letter-spacing: 1.37px;
+      margin-top: 10px;
+      @media screen and (min-width: $tablet1) {
+        font-size: 16px;
+        line-height: 24px;
+        margin-top: 20px;
+      }
+      @media screen and (min-width: $tablet2) {
+        font-size: 17px;
+        line-height: 28px;
+      }
+
+      & p {
+        line-height: 20px;
+        letter-spacing: 1.37px;
+        @media screen and (min-width: $tablet1) {
+          line-height: 24px;
+        }
+        @media screen and (min-width: $tablet2) {
+          line-height: 28px;
+        }
+      }
+    }
+  }
+}

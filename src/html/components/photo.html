@@ -1,0 +1,7 @@
+<section class="photo">
+  <div class="photo__wrap">
+    @@for (var i = 0; i < context.arr.length; i++) {
+    <div class="photo__item `+context.arr[i].class+`"><img src="`+context.arr[i].img+`" alt=""></div>
+    }
+  </div>
+</section>

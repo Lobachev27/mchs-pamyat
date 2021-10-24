@@ -1,0 +1,37 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.textarea {
+  font-family: 'Charter';
+  font-size: 14px;
+  font-weight: 700;
+  color: $gold-2;
+  width: 100%;
+  outline: none;
+  resize: none;
+  background-color: transparent;
+  border: 2px solid $gold-2;
+  padding: 12px 15px;
+  transition: border 0.3s;
+  @media screen and (min-width: $tablet1) {
+    font-size: 16px;
+    padding: 15px 20px;
+  }
+  @media screen and (min-width: $desktop1) {
+    padding: 20px 32px;
+  }
+
+  &::placeholder {
+    color: #98B7D3;
+  }
+
+  &:focus {
+    border: 2px solid $gold;
+    transition: border 0.3s;
+  }
+
+  &.validate-error {
+    border: 2px solid #ff7474;
+    transition: border 0.3s;
+  }
+}

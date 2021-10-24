@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "События"
+})
+
+<body>
+
+@@include("./components/header.html", {
+  context: {
+    "class": "header-main header-search",
+    "classMobile": "header-mobile-blue",
+  }
+})
+
+<main class="main">
+
+  <section class="intro intro-employee intro-memorial">
+    <div class="intro__bg"></div>
+    <div class="container">
+      <div class="intro-employee__info">
+        <div class="intro-employee__text">Книга памяти</div>
+        <div class="breadcrumbs">
+          <a class="breadcrumbs__link" href="./">Главная</a>
+          <span>/</span>
+          <p class="breadcrumbs__link">События</p>
+        </div>
+        <h1 class="title title-h1 title-gold">События</h1>
+        <form class="search__form">
+          <div class="search__wrap active">
+            <div class="row">
+              <div class="input__box">
+                <input type="text" id="event_search_form_date" class="input input-datepicker" autocomplete="off" placeholder="Дата события">
+                <svg id="color" xmlns="http://www.w3.org/2000/svg" width="22.499" height="20.625" viewBox="0 0 22.499 20.625">
+                  <defs>
+                    <clipPath id="clip-path">
+                      <path id="Mask" d="M22.5,20.625H0V1.875H4.688V0H6.563V1.875h3.75V0h1.875V1.875h3.75V0h1.877V1.875H22.5v18.75ZM1.875,18.75h18.75v-15H1.875ZM15,16.875v-3.75h3.75v3.75Zm-5.624,0v-3.75h3.75v3.75Zm-5.626,0v-3.75H7.5v3.75ZM15,11.251V7.5h3.75v3.751Zm-5.624,0V7.5h3.75v3.751Zm-5.626,0V7.5H7.5v3.751Z" fill="none"></path>
+                    </clipPath>
+                  </defs>
+                  <path id="Mask-2" data-name="Mask" d="M22.5,20.625H0V1.875H4.688V0H6.563V1.875h3.75V0h1.875V1.875h3.75V0h1.877V1.875H22.5v18.75ZM1.875,18.75h18.75v-15H1.875ZM15,16.875v-3.75h3.75v3.75Zm-5.624,0v-3.75h3.75v3.75Zm-5.626,0v-3.75H7.5v3.75ZM15,11.251V7.5h3.75v3.751Zm-5.624,0V7.5h3.75v3.751Zm-5.626,0V7.5H7.5v3.751Z" fill="none"></path>
+                  <g id="color-2" data-name="color" clip-path="url(#clip-path)">
+                    <rect id="color-3" data-name="color" width="30" height="30" transform="translate(-3.75 -5.625)"></rect>
+                  </g>
+                </svg>
+              </div>
+              <div class="input__box">
+                <input type="text" id="event_search_form_place" class="input" placeholder="Место события">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.966 56.966">
+                  <path d="M55.146 51.887L41.588 37.786A22.926 22.926 0 0046.984 23c0-12.682-10.318-23-23-23s-23 10.318-23 23 10.318 23 23 23c4.761 0 9.298-1.436 13.177-4.162l13.661 14.208c.571.593 1.339.92 2.162.92.779 0 1.518-.297 2.079-.837a3.004 3.004 0 00.083-4.242zM23.984 6c9.374 0 17 7.626 17 17s-7.626 17-17 17-17-7.626-17-17 7.626-17 17-17z"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="row">
+              <a class="search__hide" href="javascript:void(0);">Скрыть фильтр</a>
+              <div class="search__btn">
+                <button class="btn btn-transparent" type="reset"><span>Сбросить</span></button>
+                <button class="btn btn-gold" type="submit"><span>Искать</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="row row-order">
+            <a class="search__show" href="javascript:void(0);">Расширенный фильтр</a>
+            <div class="search__result">Результат поиска: 47 событий</div>
+          </div>
+          <div class="row">
+            <div class="input__box">
+              <input id="event_search_form_name" class="input" type="text" placeholder="Какое событие вы ищете?">
+              <button class="input__submit" type="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.966 56.966"><path d="M55.146 51.887L41.588 37.786A22.926 22.926 0 0046.984 23c0-12.682-10.318-23-23-23s-23 10.318-23 23 10.318 23 23 23c4.761 0 9.298-1.436 13.177-4.162l13.661 14.208c.571.593 1.339.92 2.162.92.779 0 1.518-.297 2.079-.837a3.004 3.004 0 00.083-4.242zM23.984 6c9.374 0 17 7.626 17 17s-7.626 17-17 17-17-7.626-17-17 7.626-17 17-17z"/></svg>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="events__list">
+    <div class="container">
+
+      @@include("./components/employee-list.html", {
+        context: {
+          arr: [
+            {"img": "./img/events-01.jpg", "date": "10.04.2010", "name": "Авиакатастрофа Смоленск", "position": "Описание события", "link": "events-detail.html",},
+            {"img": "./img/events-02.jpg", "date": "07.09.2011", "name": "Крушения Як-42 Ярославского Локомотива", "position": "Описание события", "link": "events-detail.html",},
+            {"img": "./img/events-03.jpg", "date": "01.04.2012", "name": "Крушение самолета в Тюменской области", "position": "Описание события", "link": "events-detail.html",},
+            {"img": "./img/events-04.jpg", "date": "07.07.2012", "name": "Наводнение в Краснодарском крае", "position": "Описание события", "link": "events-detail.html",},
+            {"img": "./img/events-05.jpg", "date": "06.05.2013", "name": "авиакатастрофа МИ-8", "position": "Описание события", "link": "events-detail.html",},
+            {"img": "./img/events-06.jpg", "date": "09.05.2013", "name": "Сход 17 вагонов в г. Белая Калитва Ростовской области", "position": "Описание события", "link": "events-detail.html",},
+            {"img": "./img/events-07.jpg", "date": "05.06.2013", "name": "Пожар Москва Метро", "position": "Описание события", "link": "events-detail.html",},
+            {"img": "./img/events-08.jpg", "date": "02.07.2013", "name": "Крушения вертолета МИ-8 в Якутии", "position": "Описание события", "link": "events-detail.html",},
+            {"img": "./img/events-09.jpg", "date": "11.07.2013", "name": "ДФО паводок", "position": "Описание события", "link": "events-detail.html",},
+            {"img": "./img/events-10.jpg", "date": "17.11.2013", "name": "Крушения самолёта в Казани", "position": "Описание события", "link": "events-detail.html",},
+            {"img": "./img/events-11.jpg", "date": "06.05.2014", "name": "СФО Подтопление", "position": "Описание события", "link": "events-detail.html",},
+            {"img": "./img/events-12.jpg", "date": "08.06.2014", "name": "ЦФО Природные пожары", "position": "Описание события", "link": "events-detail.html",},
+            {"img": "./img/events-13.jpg", "date": "15.07.2014", "name": "Москва м.Славянский бульвар Сход вагонов", "position": "Описание события", "link": "events-detail.html",},
+            {"img": "./img/events-14.jpg", "date": "16.11.2014", "name": "Москва Пожар в 14 этажном доме", "position": "Описание события", "link": "events-detail.html",},
+            {"img": "./img/events-15.jpg", "date": "30.01.2015", "name": "Москва Пожар в библиотеке ИНИОН РАН", "position": "Описание события", "link": "events-detail.html",},
+          ]
+        }
+      })
+
+      <a class="btn btn-gold" href="javascript:void(0);">Показать еще</a>
+      <div class="employee__down">
+
+        @@include("./components/pagination.html")
+
+        <div class="sort">
+          <div class="sort__text">Показывать по:</div>
+          <div class="input__box">
+            <select class="select" name="" >
+              <option value="hide">15</option>
+              <option value="15"><span>15</span></option>
+              <option value="30"><span>30</span></option>
+              <option value="60"><span>60</span></option>
+              <option value="120"><span>120</span></option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+@@include("./components/footer.html", {
+  context: {
+    "class": "footer-list",
+    "social": false,
+  }
+})
+
+@@include("./components/popup-add-hero.html")
+
+@@include("./components/popup-feedback.html")
+
+@@include("./components/popup-result.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+<div class="photo-person__wrap">
+  @@for (var i = 0; i < context.arr.length; i++) {
+  <a href="`+context.arr[i].img+`" data-fslightbox="gallery1" class="photo-person__item `+context.arr[i].class+`"><img src="`+context.arr[i].img+`" alt=""></a>
+  }
+</div>

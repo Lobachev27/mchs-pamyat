@@ -1,0 +1,50 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.title {
+  font-family: 'Proxima Nova';
+  text-transform: uppercase;
+  text-align: center;
+
+  &-h1 {
+    font-size: 30px;
+    line-height: 1.1em;
+    letter-spacing: 4px;
+    font-weight: 900;
+    @media screen and (min-width: $tablet1) {
+      font-size: 44px;
+    }
+    @media screen and (min-width: $tablet2) {
+      font-size: 55px;
+    }
+    @media screen and (min-width: $desktop1) {
+      font-size: 69px;
+    }
+  }
+
+  &-h2 {
+    font-size: 22px;
+    font-weight: 800;
+    @media screen and (min-width: $tablet1) {
+      font-size: 28px;
+    }
+    @media screen and (min-width: $tablet2) {
+      font-size: 32px;
+    }
+    @media screen and (min-width: $desktop1) {
+      font-size: 36px;
+    }
+  }
+
+  &-gold {
+    color: $gold-2;
+  }
+
+  &-white {
+    color: $white;
+  }
+
+  &-blue {
+    color: #0F4075;
+  }
+}

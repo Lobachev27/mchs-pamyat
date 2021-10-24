@@ -1,0 +1,257 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.biography {
+  position: relative;
+  padding: 60px 0 0;
+  margin-top: -150px;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100vw;
+    background-color: #F8F8F8;
+    z-index: -1;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      border-right: 50vw solid transparent;
+      border-left: 50vw solid $white;
+      border-bottom: 30px solid transparent;
+      border-top: 30px solid $white;
+      z-index: 2;
+      @media screen and (min-width: $tablet1) {
+        border-bottom: 60px solid transparent;
+        border-top: 60px solid $white;
+      }
+      @media screen and (min-width: $tablet2) {
+        border-bottom: 90px solid transparent;
+        border-top: 90px solid $white;
+      }
+      @media screen and (min-width: $desktop1) {
+        border-bottom: 110px solid transparent;
+        border-top: 110px solid $white;
+      }
+      @media screen and (min-width: $desktop3) {
+        border-bottom: 150px solid transparent;
+        border-top: 150px solid $white;
+      }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      border-left: 50vw solid transparent;
+      border-right: 50vw solid $white;
+      border-top: 30px solid transparent;
+      border-bottom: 30px solid $white;
+      z-index: 2;
+      @media screen and (min-width: $tablet1) {
+        border-top: 60px solid transparent;
+        border-bottom: 60px solid $white;
+      }
+      @media screen and (min-width: $tablet2) {
+        border-top: 90px solid transparent;
+        border-bottom: 90px solid $white;
+      }
+      @media screen and (min-width: $desktop1) {
+        border-top: 110px solid transparent;
+        border-bottom: 110px solid $white;
+      }
+      @media screen and (min-width: $desktop3) {
+        border-top: 150px solid transparent;
+        border-bottom: 150px solid $white;
+      }
+    }
+  }
+
+  & .title {
+    margin-top: 150px;
+  }
+
+  &__list {
+    list-style: none;
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto 0;
+    @media screen and (min-width: $tablet1) {
+      margin: 40px auto 0;
+    }
+    @media screen and (min-width: $tablet2) {
+      margin: 60px auto 0;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-bottom: 40px;
+    @media screen and (min-width: $tablet1) {
+      padding-left: 20px;
+    }
+    @media screen and (min-width: $tablet2) {
+      padding-bottom: 80px;
+    }
+
+    &:before {
+      @media screen and (min-width: $tablet1) {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 100%;
+        border-left: 1px dashed $gold-2;
+        top: 14px;
+        left: 0;
+      }
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    & .row {
+      flex-direction: column;
+      margin: 0 auto;
+      @media screen and (min-width: $tablet1) {
+        flex-direction: row;
+      }
+    }
+  }
+
+  &__year {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    margin-bottom: 10px;
+    @media screen and (min-width: $tablet1) {
+      font-size: 20px;
+      line-height: 24px;
+      width: 180px;
+      margin-bottom: 0;
+    }
+    @media screen and (min-width: $tablet2) {
+      font-size: 22px;
+      line-height: 28px;
+      width: 215px;
+    }
+
+    & span {
+      display: block;
+      color: #093A65;
+    }
+  }
+
+  &__description {
+    font-family: 'Charter';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 1.25px;
+    @media screen and (min-width: $tablet1) {
+      font-size: 16px;
+      line-height: 24px;
+      width: calc(100% - 200px);
+    }
+    @media screen and (min-width: $tablet2) {
+      font-size: 17px;
+      line-height: 28px;
+      width: 575px;
+    }
+    @media screen and (min-width: $desktop1) {
+      padding-bottom: 50px;
+    }
+
+    & p {
+      line-height: 20px;
+      letter-spacing: 1.25px;
+      @media screen and (min-width: $tablet1) {
+        line-height: 24px;
+      }
+      @media screen and (min-width: $tablet2) {
+        line-height: 28px;
+      }
+    }
+
+    & span {
+      position: relative;
+      display: inline;
+    }
+
+    & a {
+      color: $gold-2;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $gold;
+        transition: color 0.3s;
+
+        & + .tooltip-awards {
+          @media screen and (min-width: $tablet2) {
+            transition: opacity 0.5s ease-out;
+            pointer-events: auto;
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    overflow: hidden;
+    margin: 40px auto 5px;
+    @media screen and (min-width: $tablet2) {
+      margin: 80px auto 20px;
+    }
+
+    & img {
+      width: 100%;
+      object-position: center;
+      object-fit: contain;
+    }
+
+    &-name {
+      font-family: 'Charter';
+      font-weight: 700;
+      font-size: 10px;
+      line-height: 14px;
+      text-align: center;
+      margin-bottom: 5px;
+      @media screen and (min-width: $tablet1) {
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+
+    &-description {
+      font-family: 'Charter';
+      font-weight: 400;
+      font-style: italic;
+      font-size: 10px;
+      line-height: 14px;
+      text-align: center;
+      color: #84969D;
+      @media screen and (min-width: $tablet1) {
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+  }
+}
