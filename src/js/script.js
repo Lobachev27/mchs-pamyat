@@ -797,7 +797,7 @@ $(document).ready(function() {
     {
       name: 'Наводнение в Свердловской области',
       date: '14/06/1993',
-      image: '/img/events-detail-01.jpg',
+      image: './img/events-detail-01.jpg',
       dateText: '14 июня 1993 года',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       coordinates: [43.1103, 44.3227],
@@ -805,7 +805,7 @@ $(document).ready(function() {
     {
       name: 'Прорыв плотины в Башкирии',
       date: '07/08/1994',
-      image: '/img/events-detail-01.jpg',
+      image: './img/events-detail-01.jpg',
       dateText: '7 августа 1994 года',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       coordinates: [45.1103, 46.3227],
@@ -813,7 +813,7 @@ $(document).ready(function() {
     {
       name: 'Землятресение на Сахалине',
       date: '28/05/1995',
-      image: '/img/events-detail-01.jpg',
+      image: './img/events-detail-01.jpg',
       dateText: '28 мая 1995 года',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       coordinates: [47.1103, 48.3227],
@@ -821,7 +821,7 @@ $(document).ready(function() {
     {
       name: 'Подъем воды в г. Ленск',
       date: '19/05/1998',
-      image: '/img/events-detail-01.jpg',
+      image: './img/events-detail-01.jpg',
       dateText: '19 мая 1998 года',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       coordinates: [49.1103, 50.3227],
@@ -829,7 +829,7 @@ $(document).ready(function() {
     {
       name: 'Массовые теракты в России',
       date: '04/09/1999',
-      image: '/img/events-detail-01.jpg',
+      image: './img/events-detail-01.jpg',
       dateText: '4 сентября 1999 года',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       coordinates: [51.1103, 52.3227],
